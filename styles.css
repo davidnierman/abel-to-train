@@ -1,0 +1,8 @@
+.nav-link:hover{
+  color:blue
+}
+.carousel-item  img {
+  width: auto;
+  height: 100em;
+  max-height: 225px;
+}
