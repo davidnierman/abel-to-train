@@ -1,8 +1,20 @@
 .nav-link:hover{
   color:blue
 }
+
+/* Link that explains how to edit carousel to fit images: https://www.youtube.com/watch?v=KHF6nysy0-c */
 .carousel-item  img {
-  width: auto;
-  height: 100em;
-  max-height: 225px;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  height: 70vh;
+  overflow:hidden;
+}
+
+footer{
+  margin-top: 10vh;
+}
+
+h4{
+  margin: 5vh;
 }
