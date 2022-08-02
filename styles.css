@@ -18,3 +18,8 @@ footer{
 h4{
   margin: 5vh;
 }
+
+.accordion-button{
+  display: block;  
+  text-align: center;
+}
