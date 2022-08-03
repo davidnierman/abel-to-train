@@ -44,7 +44,7 @@
             <li class="nav-item">
               <!-- Button trigger modal -->
               <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                Book Consultation
+                Get Started Here!
               </button>
             </li>
           </ul>
@@ -62,15 +62,48 @@
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Contact Info</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
-                ...
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+                <!-- ################## CONTACT ME FORM ####################### -->
+                <form
+                  action="https://formspree.io/f/mrgdzaly"
+                  method="POST"
+                >
+                  <div class="mb-2">
+                    <label for="FirstName" class="form-label">First Name: </label>
+                    <input type="text" class="form-control" id="FirstName" name="FirstName" placeholder = "Jane" required>
+                  </div>
+                  <div class="mb-2">
+                    <label for="LastName">Last Name:</label>
+                    <input type="text" class="form-control" id="LastName" name="LastName" placeholder = "Doe" required>
+                  </div>
+                  <div class="mb-2">
+                    <label for="Email">Email:</label>
+                    <input type="email" class="form-control" id="Email" name="Email" placeholder="JaneDoe@gmail.com" required>
+                  </div>
+                  <div class="mb-2">
+                    <label for="phone">Phone Number: ###-###-####</label>
+                    <input type="tel" class="form-control" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"required>
+                  </div>
+                  <label for="inputGroupSelect01">How would you like to train?</label>
+                  <div class="input-group mb-2">
+                    <select class="form-select" name="Training Preference" id="inputGroupSelect01">
+                      <option selected>Choose...</option>
+                      <option value="In Person">In Person Training</option>
+                      <option value="Online">Online Training</option>
+                      <option value="Group">Group Training</option>
+                    </select>
+                  </div>
+                    <!-- When our servers receive a submission, if the _gotcha field is filled in,
+                    we take that as a sign that a bot has submitted the form, and we silently 
+                    ignore the submission. - form spree -->
+                    <input type="text" name="_gotcha" style="display:none" />
+                  <div class=" mt-4 d-grid gap-2">
+                      <button type="submit" class="btn btn-primary">I'm Ready to Train!</button>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
@@ -79,10 +112,6 @@
     
 
     <!-- ##########################       HOME       ##########################-->
-
-          <h4 id="scrollspyHeading1" class="text-center">
-            Home
-          </h4>
 
           <!-- *********** NOTES FOR IMAGE SPECS FOR CAROUSEL **************** -->
 
