@@ -1,13 +1,26 @@
 .nav-link:hover{
-  color:blue
+  color: rgba(181, 91, 26, 1);
+}
+
+.btn-primary{
+  background-color:  rgba(181, 91, 26, 1);
+  border-color: aliceblue;
 }
 
 .nav-link{
   color:aliceblue;
 }
 
+h4{
+  color: aliceblue;
+}
+
 html {
   height: 100%;
+}
+
+.orange{
+  background-color: rgba(181, 91, 26, 1);
 }
 
 .bg { 
@@ -37,7 +50,14 @@ p{
 .accordion-button{
   display: block;  
   text-align: center;
-  background-color: rgba(181, 91, 26, 0.768);
+  background-color: rgba(181, 91, 26, 1);
+  padding: 4vh;
+  margin: 2vh;
+  border-radius: 2%;
+}
+
+.accordion-body{
+  color:aliceblue;
 }
 
 .card-body{
@@ -45,7 +65,7 @@ p{
 }
 
 .card{
-  background-color: rgba(181, 91, 26, 0.768);
+  background-color: rgba(181, 91, 26, 1);
 }
 
 /* Desktops and laptops ----------- */
