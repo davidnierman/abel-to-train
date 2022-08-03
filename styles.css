@@ -2,13 +2,21 @@
   color:blue
 }
 
-/* Link that explains how to edit carousel to fit images: https://www.youtube.com/watch?v=KHF6nysy0-c */
-.carousel-item  img {
-  width: 100%;
-  object-fit: cover;
-  object-position: center;
-  height: 70vh;
-  overflow:hidden;
+/* body, html {
+  height: 100%;
+} */
+
+.bg { 
+  /* The image used */
+  background-image: url("images/stretch.webp");
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 h4{
@@ -18,6 +26,11 @@ h4{
 .accordion-button{
   display: block;  
   text-align: center;
+  background-color: rgba(181, 91, 26, 0.768);
+}
+
+.container100vh{
+  height: 100vh;  
 }
 
 /* Desktops and laptops ----------- */

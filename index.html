@@ -23,7 +23,7 @@
   </head>
 
     <!-- ##########################    NAVIGATION     ##########################-->
-    <nav id="navbar" class="navbar sticky-top navbar-expand-lg bg-light">
+    <nav id="navbar" class="navbar sticky-top navbar-expand-lg bg-secondary">
       <div class="container-fluid">
         <a class="navbar-brand" href="#scrollspyHeading1">
           <img src="https://thumbs.dreamstime.com/b/letter-logo-design-simple-modern-logo-design-letter-very-simple-black-background-color-183193944.jpg" alt="" width="30" height="24" class="d-inline-block align-text-top">
@@ -64,10 +64,9 @@
         </div>
       </div>
     </nav>
-
     <!-- ##########################   END OF NAVIGATION     ##########################-->
   <body>
-    <div data-bs-spy="scroll" data-bs-target="#navbar" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example bg-light p-3 rounded-2" tabindex="0">
+    <div data-bs-spy="scroll" data-bs-target="#navbar" data-bs-root-margin="0px 0px 0px" data-bs-smooth-scroll="true" class="scrollspy-example bg-secondary rounded-2" tabindex="0">
         <!-- ##########################   CONTACT MODAL    ##########################-->
         <!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -129,43 +128,14 @@
 
         <!-- ##########################       HOME       ##########################-->
 
-        <div id="scrollspyHeading1" class="text-center"></div>
-
-          <!-- *********** NOTES FOR IMAGE SPECS FOR CAROUSEL **************** -->
-
-          <!-- This Bootply Demo of Carousel uses a 1024x700 px image as an example. 
-          If you want to have a carousel image that spans the full width of the 
-          screen its probably a good idea to use an image that is at least 1024 px wide (possibly wider),
-          though you don't want it to be too high resolution, since that would take a long time to load. -->
-          <div class="container100vh">
-            <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img src="https://media.istockphoto.com/vectors/empty-modern-gym-concept-vector-flat-cartoon-graphic-design-vector-id1157752885?k=20&m=1157752885&s=612x612&w=0&h=WWufhQbnxg5rGvgcXHFbLzzuGIrWgpZbKXNSfT9GkEQ="class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                  <img src="https://i.etsystatic.com/16732551/r/il/fcc2df/1468570630/il_fullxfull.1468570630_lg4l.jpg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                  <img src="./pexels-pixabay-210186.jpeg" class=" d-block w-100" alt="...">
-                </div>
-              </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
-            </div>
-          </div>
+        <div id="scrollspyHeading1" class="text-center container100vh">
+          <div class="bg"></div>
+        </div>
+            
         
           <!-- ##########################      ABOUT       ########################## -->
-
-          <br><br>
-          <div class="container100vh">
-            <h4 id="scrollspyHeading2" class="text-center">
+          <div id="scrollspyHeading2" class="container100vh">
+            <h4 class="text-center">
               About
             </h4>
             <div class="container text-center">
@@ -304,7 +274,7 @@
                     </div>
                   </div>
                 </div>
-    </div>
+              </div>
   </body>
 
     <!-- ##########################       FOOTER       ########################## -->
@@ -348,11 +318,11 @@
           ><i class="fab fa-linkedin"></i
         ></a>
         <!-- Github -->
-        <a
+        <!-- <a
           class="btn btn-link btn-lg text-dark"
           href="#!"
           ><i class="fab fa-github"></i
-        ></a>
+        ></a> -->
       </section>
       <!-- Section: Social media -->
     </div>
