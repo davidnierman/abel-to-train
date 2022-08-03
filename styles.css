@@ -11,10 +11,6 @@
   overflow:hidden;
 }
 
-footer{
-  margin-top: 10vh;
-}
-
 h4{
   margin: 5vh;
 }
@@ -22,4 +18,12 @@ h4{
 .accordion-button{
   display: block;  
   text-align: center;
+}
+
+/* Desktops and laptops ----------- */
+@media only screen 
+and (min-width : 1224px) {
+  .container100vh{
+    height: 100vh;  
+  }
 }
