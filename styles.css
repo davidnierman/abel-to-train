@@ -6,6 +6,16 @@
   color: rgba(181, 91, 26, 1);
 }
 
+.navbar-toggler {
+  border: 0 solid rgba(181, 91, 26, 1);
+}
+
+.navbar-toggler:focus {
+  text-decoration: none;
+  outline: 0;
+  box-shadow: none;
+}
+
 .btn-primary{
   background-color:  rgba(181, 91, 26, 1);
   border-color: aliceblue;
