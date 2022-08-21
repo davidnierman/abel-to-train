@@ -1,0 +1,23 @@
+{
+  "name": "abel-to-train",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script-main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dnierman0920/abel-to-train.git"
+  },
+  "author": "David",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dnierman0920/abel-to-train/issues"
+  },
+  "homepage": "https://github.com/dnierman0920/abel-to-train#readme",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "dotenv": "^16.0.1"
+  }
+}

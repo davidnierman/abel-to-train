@@ -1,11 +1,14 @@
 <!doctype html>
 <html lang="en">
   <head>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Abel-To-Train</title>
     <!-- ##########################    JS FILEs     ##########################-->
-
+    <!-- TESTING -->
+    <script src="https://www.google.com/recaptcha/enterprise.js" async defer></script>
+    <!-- END TESTING -->
     <!-- adds icons -->
     <script src="https://kit.fontawesome.com/15443c3282.js" crossorigin="anonymous"></script>
 
@@ -81,7 +84,7 @@
               <div class="modal-body">
               <!-- ################## CONTACT ME FORM ####################### -->
                 <form
-                  action="https://formspree.io/f/mrgdzaly"
+                  action="TBD"
                   method="POST"
                 >
                   <div class="mb-2">
@@ -114,6 +117,7 @@
                     ignore the submission. - form spree -->
                     <input type="text" name="_gotcha" style="display:none" />
                   <div class=" mt-4 d-grid gap-2">
+                  <div class="g-recaptcha" data-sitekey=RECAPTCHA_KEY></div>
                       <button
                        type="submit"
                        class="btn btn-primary">
@@ -282,7 +286,19 @@
                     </div>
                   </div>
                 </div>
-  </body>
+    <!--##############################################################################  -->
+    <!--                                   TESTING                                      -->
+    <!--##############################################################################  -->
+      <body>
+        <form action="?" method="POST">
+          <div class="g-recaptcha" data-sitekey="6Ld4-ZQhAAAAACEgadokuQ5QChNWq4WeTm1Mf4QX"></div>
+          <br/>
+          <input type="submit" value="Submit">
+        </form>
+    <!--##############################################################################  -->
+    <!--                                   END - TESTING                                      -->
+    <!--##############################################################################  -->
+
 
     <!-- ##########################       FOOTER       ########################## -->
     <footer class="text-center text-white orange">
@@ -344,4 +360,11 @@
       designed by:
     </small>
     <a class="text-white" href="http://www.davidnierman.com/"><small>davidnierman.com</small></a>
+
+        <!-- testing env -->
+        <script>
+          console.log("hi")
+          TestEnvVarsLoad()
+        </script>
+        
 </html>
