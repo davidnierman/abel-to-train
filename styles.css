@@ -1,14 +1,50 @@
+/* VARS */
+/* #################################################### */
+/*                      COLORS                          */
+/* #################################################### */
+
+:root {
+  /* Color Palette Charcoal with yellow accents*/ 
+  --Battleship-Grey: #848C8E;
+  --Charcoal: #435058;
+  --Mindaro: #DCF763;
+  --Palte-Silver: #bfb7b6;
+  --Cultured: #F1F2EE;
+
+  /* Color Palette Blues and a White */
+  --Prussian-Blue:#13293d;
+  --Sapphire-Blue: #006494;
+  --CG-Blue: #247ba0;
+  --Carolina-Blue:#1b98e0;
+  --Alice-Blue:#e8f1f2;
+
+  /* Color Palette Brown witha  light blue and grey */
+  --black-chocolate: #0f1108ff;
+  --black-chocolate-2: #241909ff;
+  --fluorescent-blue: #00f6edff;
+  --beau-blue: #cad8deff;
+  --umber: #645853ff;
+
+/* Color Palette Black, Blue and Brownish Pink  */
+  --black: #000000ff;
+  --dodger-blue: #1098f7ff;
+  --white: #ffffffff;
+  --silver-pink: #b89e97ff;
+  --queen-pink: #deccccff;
+}
+
 .nav-link:hover{
-  color: rgba(181, 91, 26, 1);
+  color: var(--Cultured);
 }
 
-.navbar-nav .nav-link.active, .navbar-nav .show>.nav-link {
-  color: rgba(181, 91, 26, 1);
+.navbar-nav, .nav-link.active, .navbar-nav, .show>.nav-link {
+  color: var(--Mindaro);
 }
 
-.navbar-toggler {
-  border: 0 solid rgba(181, 91, 26, 1);
+.modal-header, .modal-body{
+  background-color: var(--Charcoal);
 }
+
 
 .navbar-toggler:focus {
   text-decoration: none;
@@ -17,31 +53,31 @@
 }
 
 .btn-primary{
-  background-color:  rgba(181, 91, 26, 1);
-  border-color: aliceblue;
+  background-color: var(--Mindaro);
+  border-color: var(--Battleship-Grey);
+  color: var(--Battleship-Grey)
 }
 
 .nav-link{
-  color:aliceblue;
+  color:var(--Mindaro)
 }
 
 .navbar-brand{
-  color:rgba(181, 91, 26, 1);
+  color:var(--Mindaro);
 }
 
 h1, h4{
-  color: aliceblue;
+  color: var(--Mindaro);
   margin-top: 2%;
 
 }
-
 
 html {
   height: 100%;
 }
 
-.orange{
-  background-color: rgba(181, 91, 26, 1);
+nav, body{
+  background-color: var(--Charcoal);
 }
 
 .bg { 
@@ -60,28 +96,32 @@ p{
   line-height: 2;
   word-spacing: 2;
   align-content: center;
-  color: aliceblue;
+  color: var(--Mindaro);
 }
 
 .accordion-button{
   display: block;  
   text-align: center;
-  background-color: rgba(181, 91, 26, 1);
+  background-color: var(--Mindaro);
   padding: 4vh;
   margin-top: 2vh;
   border-radius: 1%;
 }
 
 .accordion-body{
-  color:aliceblue;
+  color:var(--Mindaro);
 }
 
 .card-body{
-  background-color: black;
+  background-color: var(--Mindaro);
+}
+
+.card-text{
+  color: var(--Charcoal)
 }
 
 .card{
-  background-color: rgba(181, 91, 26, 1);
+  background-color: var(--Mindaro);
 }
 
 /* Desktops and laptops ----------- */
@@ -89,15 +129,15 @@ p{
 and (min-width : 1224px) {
   .container100vh{
     height: 100vh;
-    border-top: 1px solid rgba(181, 91, 26, 1);
+    border-top: 1px solid var(--Mindaro);
   }
   .container80vh{
     height: 80vh;
-    border-top: 1px solid rgba(181, 91, 26, 1);
+    border-top: 1px solid var(--Mindaro);
   }
   .container60vh{
     height: 60vh;
-    border-top: 1px solid rgba(181, 91, 26, 1);
+    border-top: 1px solid var(--Mindaro);
   }
   #Home-Header{
     width: 40%;
