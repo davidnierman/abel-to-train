@@ -17,7 +17,9 @@
 
     <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-
+    
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <!-- ##########################    STYLE SHEETS     ##########################-->
     <!-- add Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
@@ -150,7 +152,7 @@
             
         
           <!-- ##########################      ABOUT       ########################## -->
-          <div id="scrollspyHeading2" class="container90vh">
+          <div id="scrollspyHeading2" class="container150vh">
             <h4 class="text-center">
               About
             </h4>
@@ -158,15 +160,79 @@
               <div class="row justify-content-md-around d-flex align-items-center">
                 <div class="col-md-4 p-2">
                   <div class="card ">
-                    <img src="images/Certified-Personal-Trainer.jpeg" class="card-img-top" alt="...">
+                    <div id="carouselAboutMe" class="carousel slide" data-ride="carousel">
+                      <div class="carousel-inner">
+                        <div class="carousel-item active">
+                          <img src="images/Certified-Personal-Trainer.jpeg" class="card-img-top" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                          <img src="images/Grey-Outfit-Medicine-Ball.jpeg" class="card-img-top" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                          <img src="images/Red-Outfit.jpeg" class="card-img-top" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                          <img src="images/Grey-Outfit-Medicine-Ball.jpeg" class="card-img-top" alt="...">
+                        </div>
+                      </div>
+                    </div>
+                    <script>
+                    console.log("Activating Carousel")
+                    // Activate Carousel
+                    const carouselAboutMeElement = document.querySelector('.carousel')
+                    const carousel = new bootstrap.Carousel(carouselAboutMeElement, {
+                    interval: 5000,
+                    keyboard: true,
+                    pause:"hover",
+                    ride:"carousel",
+                    wrap:true
+                    })
+                    console.log("this is the carousel object that should be activated: ", carousel)
+                    </script>
                   </div>
                 </div>
-                <div class="col-md-4">
-                      <p>
-                        Some quick example text to build on the card title and make up the bulk of the card's content.
-                        This is an about section that will stuff abou the person which is about the person from it is about.
-                        The more about this person the more about the about that will about to fit in this section about them.
-                      </p>
+                <div class="col-md-6">
+                  <p>
+                    Aarin has been an athlete her entire life. From club soccer to competitive water polo, Aarin
+                    played rugby during her collegiate days at the University of Southern California. Exercise and
+                    fitness has always been an important part of Aarin’s lifestyle, but after being diagnosed with
+                    Crohn’s Disease in 2017, Aarin struggled with finding ways to maintain her fitness. Even doing
+                    functional tasks like carrying groceries up two flights of stairs proved to be challenging. Wanting
+                    to educate and help herself get back to an active and self-sufficient lifestyle, Aarin decided to
+                    pursue an education in personal fitness. In 2018 Aarin earned her personal training
+                    certification from the American Council of Exercise (ACE).
+                  </p>
+                  <p>
+                    With her new fitness education Aarin trained herself from carrying groceries up the stairs to
+                    getting back to running a 10K races. She also started training clients in Los Angeles, California,
+                    including those with fellow auto-immune diseases, showing them that a self-sufficient and
+                    active lifestyle is possible.
+                  </p>
+
+                  <p>
+                    Knowing that a healthy lifestyle is a holistic approach, Aarin decided to dive into nutritional
+                    studies. Aarin has earned her certification in Nutritional Coaching in 2020 from ACE and later on
+                    continued her education in functional movement and the benefits of cross training and
+                    preparedness by earning her CrossFit® Level 1 Trainer certification in 2022.
+                  </p>
+
+                  <p>
+                    From 2021-2022 Aarin was also trained in Applied Function Science (AFS) during her time at
+                    Rehab United, an esteemed sports rehab and physical therapy clinic in San Diego, California.
+                    AFS emphasizes three dimensional functional movement and mobility which mirrors how we
+                    move in daily life. During her time at Rehab United, Aarin greatly enjoyed her time working with
+                    all populations but specifically older adults. Aarin finds its extremely rewarding strengthening
+                    those later in life to be able to achieve functional daily tasks, not much different from her love
+                    on training those living with auto-immune diseases.
+                  </p>
+                
+                  <p>
+                    When Aarin isn’t working out at her home gym you can catch her surfing, hiking, camping out of
+                    her rooftop tent (her dream is to hit every National Park in her lifetime) loving up on her lab-
+                    mix Jesse, cooking healthy meals and dancing the night away with her friends under the techno
+                    disco ball.
+                  </p>
+
                   </div>
                 </div>
               </div>
@@ -268,7 +334,7 @@
                                                 'functionalMovementLivingWithAutoImmuneDiseases':'functionalMovementLivingWithAutoImmuneDiseasesArrow',
                                                 'sportsRehabAndInjuryPrevention':'sportsRehabAndInjuryPreventionArrow'
                                             }
-                  
+                  // add event listeners to change the up and down arrow
                   for (const [key, value] of Object.entries(trainingOfferings)){
                     let element  = document.getElementById(key)
                     element.addEventListener("click", function(){
@@ -277,7 +343,7 @@
                   }
                 </script>
 
-                <!-- ##########################       REVIEWS       ########################## -->
+                <!-- ##########################       TESTIMONIALS       ########################## -->
                 <div class="container80vh">
                   <h4 id="scrollspyHeading4" class="text-center">
                     Reviews
@@ -286,7 +352,7 @@
                     <div class="row justify-content-md-around gap-3">
                       <div class="col-md-3 p-2 col-md-1">
                         <div class="card ">
-                          <img src="https://www.kindpng.com/picc/m/59-596948_fitness-clipart-fit-man-individual-people-clip-art.png" class="card-img-top" alt="...">
+                          <img src="images/Grey-Outfit-Stretch.jpeg" class="card-img-top" alt="...">
                           <div class="card-body">
                             <p class="card-text">
                               Some quick example text to build on the card title and make up the bulk of the card's content.
@@ -296,7 +362,7 @@
                       </div>
                       <div class="col-md-3 p-2 col-md-1">
                         <div class="card">
-                          <img src="https://www.kindpng.com/picc/m/59-596948_fitness-clipart-fit-man-individual-people-clip-art.png" class="card-img-top" alt="...">
+                          <img src="images/Grey-Outfit-Stretch.jpeg" class="card-img-top" alt="...">
                           <div class="card-body">
                             <p class="card-text">
                               Some quick example text to build on the card title and make up the bulk of the card's content.
@@ -306,7 +372,7 @@
                       </div>
                       <div class="col-md-3 p-2 col-md-1">
                         <div class="card">
-                          <img src="https://www.kindpng.com/picc/m/59-596948_fitness-clipart-fit-man-individual-people-clip-art.png" class="card-img-top" alt="...">
+                          <img src="images/Grey-Outfit-Stretch.jpeg" class="card-img-top" alt="...">
                           <div class="card-body">
                             <p class="card-text">
                               Some quick example text to build on the card title and make up the bulk of the card's content.
@@ -317,10 +383,10 @@
                     </div>
                   </div>
                 </div>
+      <body>
     <!--##############################################################################  -->
     <!--                                   TESTING                                      -->
     <!--##############################################################################  -->
-      <body>
         <form action="?" method="POST">
           <div class="g-recaptcha" data-sitekey="6Ld4-ZQhAAAAACEgadokuQ5QChNWq4WeTm1Mf4QX"></div>
           <br/>
@@ -391,11 +457,4 @@
       designed by:
     </small>
     <a class="text-white" href="http://www.davidnierman.com/"><small>davidnierman.com</small></a>
-
-        <!-- testing env -->
-        <script>
-          console.log("hi")
-          TestEnvVarsLoad()
-        </script>
-        
 </html>

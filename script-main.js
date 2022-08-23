@@ -1,6 +1,3 @@
-// This file holds custom functions  and environmental keys
-require('dotenv').config();
-
 // this function allows the attribute "d" to be changed when "aria-expanded" boolean changes
 // The d attribute defines a path to be drawn.
 function changeD(buttonId, pathId, pathDrawnA, pathDrawnB){
@@ -14,9 +11,8 @@ function changeD(buttonId, pathId, pathDrawnA, pathDrawnB){
   else {
     path.setAttribute("d", pathDrawnB)
   }
-}
+};
 
 function TestEnvVarsLoad(){
-  console.log("env vars: ", process.env)
-}
-
+  console.log("env vars: ")
+};
