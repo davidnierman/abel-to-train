@@ -123,11 +123,11 @@ p{
 }
 
 .card, .card-body{
-  background-color: var(--tertiary);
+  background-color: var(--secondary);
 }
 
 .card-text{
-  color: var(--secondary)
+  color: var(--primary)
 }
 
 
