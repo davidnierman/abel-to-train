@@ -94,14 +94,6 @@
                 <form action="?" method="POST">
                   <div class="g-recaptcha" data-sitekey="6Ld4-ZQhAAAAACEgadokuQ5QChNWq4WeTm1Mf4QX"></div>
                   <br/>
-                  <input type="submit" value="Submit">
-                </form>
-              <!-- ################## CONTACT ME FORM ####################### -->
-                <form
-                  action="?"
-                  method="POST"
-                >
-                <div class="g-recaptcha" data-sitekey="6Ld4-ZQhAAAAACEgadokuQ5QChNWq4WeTm1Mf4QX"></div>
                   <div class="mb-2">
                     <label for="FirstName" class="form-label">First Name: </label>
                     <input type="text" class="form-control" id="FirstName" name="FirstName" placeholder = "Jane" required>
@@ -127,26 +119,12 @@
                       <option value="Group">Group Training</option>
                     </select>
                   </div>
-                    <!-- When our servers receive a submission, if the _gotcha field is filled in,
-                    we take that as a sign that a bot has submitted the form, and we silently 
-                    ignore the submission. - form spree -->
-                    <input type="text" name="_gotcha" style="display:none" />
-                    <div class="mt-4 d-grid gap-2">
-                      <button
-                        id = form-submit
-                        type="submit"
-                        class="btn btn-primary g-recaptcha"
-                        value="submit"
-                        >
-                        I'm Ready to Train!
+                  <div class="mt-4 d-grid gap-2">
+                    <button type="submit" value="I'm Ready to Train!" class="btn btn-primary">
+                      I'm Ready to Train
                     </button>
-                    <script>
-                      function onSubmit(token) {
-                        document.getElementById("form-submit").submit();
-                      }
-                    </script>
                   </div>
-                <!-- </form> -->
+                </form>
               </div>
             </div>
           </div>
