@@ -6,9 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Abel-To-Train</title>
     <!-- ##########################    JS FILEs     ##########################-->
-    <!-- TESTING -->
-    <script src="https://www.google.com/recaptcha/enterprise.js" async defer></script>
-    <!-- END TESTING -->
+    <script src="https://www.google.com/recaptcha/api.js"></script>
     <!-- adds icons -->
     <script src="https://kit.fontawesome.com/15443c3282.js" crossorigin="anonymous"></script>
 
@@ -126,14 +124,24 @@
                     we take that as a sign that a bot has submitted the form, and we silently 
                     ignore the submission. - form spree -->
                     <input type="text" name="_gotcha" style="display:none" />
-                    <div class="g-recaptcha mt-4 d-grid gap-2" data-sitekey="6Ld4-ZQhAAAAACEgadokuQ5QChNWq4WeTm1Mf4QX">
+                    <div class="mt-4 d-grid gap-2" data-sitekey="6Ld4-ZQhAAAAACEgadokuQ5QChNWq4WeTm1Mf4QX">
                       <button
+                        id = form-submit
                         type="submit"
-                        class="btn btn-primary">
+                        class="btn btn-primary g-recaptcha"
+                        data-sitekey="reCAPTCHA_site_key" 
+                        data-callback='onSubmit' 
+                        data-action='submit'
+                        >
                         I'm Ready to Train!
                     </button>
+                    <script>
+                      function onSubmit(token) {
+                        document.getElementById("form-submit").submit();
+                      }
+                    </script>
                   </div>
-                </form>
+                <!-- </form> -->
               </div>
             </div>
           </div>
