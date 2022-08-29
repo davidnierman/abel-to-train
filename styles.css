@@ -122,20 +122,39 @@ p{
   color:var(--secondary);
 }
 
-.card, .card-body{
+.card{
+  border-color: var(--secondary);
+}
+
+.card-header{
   background-color: var(--secondary);
+}
+
+.card-body{
+  background-color: var(--primary);
 }
 
 .card-text{
   color: var(--primary)
 }
 
+.review-carousel{
+  width: 95vh;
+}
+
+.blockquote-footer, cite{
+  color: var(--tertiary);
+}
 
 /* Desktops and laptops ----------- */
 @media only screen 
 and (min-width : 1224px) {
   .container150vh{
     height: 150vh;
+    border-top: 1px solid var(--secondary);
+  }
+  .container110vh{
+    height: 110vh;
     border-top: 1px solid var(--secondary);
   }
   .container100vh{
