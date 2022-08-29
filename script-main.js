@@ -19,4 +19,4 @@ function TestEnvVarsLoad(){
 
 function getRecaptchaResponse(response){
   console.log("Recaptcha Response: ", response)
-}
+};
