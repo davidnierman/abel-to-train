@@ -36,12 +36,17 @@
 --primary: var(--charcoal);
 --secondary: var(--mindaro);
 --tertiary: var(--cultured);
+--quaternary: var(--battleship-grey)
 }
 
 .nav-link:hover{
   color: var(--tertiary);
 }
 
+.fa-bars{
+  color: var(--secondary);
+  font-size:28px;
+}
 
 
 .modal-header, .modal-body{
@@ -49,23 +54,23 @@
 }
 
 
-.navbar-toggler:focus {
-  text-decoration: none;
+.navbar-toggler{
   outline: 0;
-  box-shadow: none;
+  background-color: var(--primary);
+  border-color: var(--secondary);
 }
 
 .btn-primary{
-  background-color: var(--secondary);
-  border-color: var(--tertiary);
-  color: var(--primary)
+  background-color: var(--primary);
+  border-color: var(--secondary);
+  color: var(--secondary);
+  box-shadow: var(--bs-btn-focus-box-shadow);
 }
 
-.btn-primary:hover{
-  background-color: var(--primary);
-  border-color: var(--tertiary);
-  color: var(--secondary)
-
+.btn-primary:hover, .btn-primary:focus{
+  background-color: var(--secondary);
+  border-color: var(--secondary);
+  color: var(--primary);
 }
 
 .nav-link{
@@ -116,6 +121,7 @@ p{
   padding: 4vh;
   margin-top: 2vh;
   border-radius: 1%;
+  color: var(--primary)
 }
 
 .accordion-body{
