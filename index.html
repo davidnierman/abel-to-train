@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Abel-To-Train</title>
     <!-- ##########################    JS FILEs     ##########################-->
-    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <!-- adds icons -->
     <script src="https://kit.fontawesome.com/15443c3282.js" crossorigin="anonymous"></script>
 
@@ -95,6 +95,7 @@
                   action="?"
                   method="POST"
                 >
+                <div class="g-recaptcha" data-sitekey="6Ld4-ZQhAAAAACEgadokuQ5QChNWq4WeTm1Mf4QX"></div>
                   <div class="mb-2">
                     <label for="FirstName" class="form-label">First Name: </label>
                     <input type="text" class="form-control" id="FirstName" name="FirstName" placeholder = "Jane" required>
@@ -129,9 +130,7 @@
                         id = form-submit
                         type="submit"
                         class="btn btn-primary g-recaptcha"
-                        data-sitekey="6Ld4-ZQhAAAAACEgadokuQ5QChNWq4WeTm1Mf4QX" 
-                        data-callback='onSubmit' 
-                        data-action='submit'
+                        value="submit"
                         >
                         I'm Ready to Train!
                     </button>
