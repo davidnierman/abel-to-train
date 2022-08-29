@@ -39,7 +39,7 @@
 --quaternary: var(--battleship-grey)
 }
 
-.nav-link:hover{
+.navbar-nav .nav-link.active, .navbar-nav .show>.nav-link{
   color: var(--tertiary);
 }
 
@@ -60,6 +60,11 @@
   border-color: var(--secondary);
 }
 
+.fixed-bottom{
+  margin: 1vh;
+  left:28vh;
+}
+
 .btn-primary{
   background-color: var(--primary);
   border-color: var(--secondary);
@@ -71,6 +76,19 @@
   background-color: var(--secondary);
   border-color: var(--secondary);
   color: var(--primary);
+}
+
+.btn-scroller{
+  background-color: var(--quaternary);
+  border-color: var(--secondary);
+  color: var(--tertiary);
+  box-shadow: 0 0 1vh rgba(49,132,253);
+}
+
+.btn-scroller:hover, .btn-scroller:focus{
+  background-color: var(--quaternary);
+  border-color: var(--secondary);
+  color: var(--tertiary);
 }
 
 .nav-link{
@@ -93,6 +111,7 @@ html {
 
 nav, body{
   background-color: var(--primary);
+  border-bottom: 1px solid var(--secondary);
 }
 
 .bg { 

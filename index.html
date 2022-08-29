@@ -72,6 +72,14 @@
       </div>
     </nav>
     <!-- ##########################   END OF NAVIGATION     ##########################-->
+    <!-- ##########################   SCROLLING BUTTON FOR MOBILE ONLY    ##########################-->
+
+    <div class="d-lg-none fixed-bottom">
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-scroller" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Get Started Here!
+      </button>
+    </div>
   <body>
     <div data-bs-spy="scroll" data-bs-target="#navbar" data-bs-root-margin="0px 0px 0px" data-bs-smooth-scroll="true" class="scrollspy-example rounded-2" tabindex="0">
         <!-- ##########################   CONTACT MODAL    ##########################-->
@@ -297,7 +305,8 @@
                 <div class="col-md-4 p-2">
                   <div class="card ">
                     <div id="carouselAboutMe" class="carousel slide" data-ride="carousel">
-                      <div class="carousel-inner">
+                      <!-- <div class="carousel-inner"> -->
+                        <div class="carousel-inner" role="listbox" style=" width:100%; height: 500px !important;">
                         <div class="carousel-item active">
                           <img src="images/Certified-Personal-Trainer.jpeg" class="card-img-top" alt="...">
                         </div>
@@ -313,7 +322,6 @@
                       </div>
                     </div>
                     <script>
-                    console.log("Activating Carousel")
                     // Activate Carousel
                     const carouselAboutMeElement = document.querySelector('.carousel')
                     const carousel = new bootstrap.Carousel(carouselAboutMeElement, {
