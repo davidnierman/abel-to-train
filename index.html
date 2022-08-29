@@ -1,7 +1,6 @@
 <!doctype html>
 <html lang="en">
   <head>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Abel-To-Train</title>
@@ -118,17 +117,8 @@
                       <option value="Group">Group Training</option>
                     </select>
                   </div>
-                  <div class="g-recaptcha" data-sitekey="6Ld4-ZQhAAAAACEgadokuQ5QChNWq4WeTm1Mf4QX"></div>
+                  <div class="g-recaptcha" data-sitekey="6Ld4-ZQhAAAAACEgadokuQ5QChNWq4WeTm1Mf4QX" data-callback="getRecaptchaResponse()"></div>
                   <div class="mt-4 d-grid gap-2">
-                  <script>
-                    if (grecaptcha.getResponse() == ""){
-                        alert("You can't proceed!");
-                        console.log(grecaptcha.getResponse())
-                    } else {
-                        alert("Thank you");
-                        console.log(grecaptcha.getResponse())
-                    }
-                  </script>
                     <button type="submit" value="I'm Ready to Train!" class="btn btn-primary">
                       I'm Ready to Train
                     </button>

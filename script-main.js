@@ -16,3 +16,7 @@ function changeD(buttonId, pathId, pathDrawnA, pathDrawnB){
 function TestEnvVarsLoad(){
   console.log("env vars: ")
 };
+
+function getRecaptchaResponse(response){
+  console.log("Recaptcha Response: ", response)
+}
