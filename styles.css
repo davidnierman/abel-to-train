@@ -171,6 +171,14 @@ p{
   color: var(--tertiary);
 }
 
+.img-thumbnail{
+  margin-top: 3vh;
+}
+
+small{
+  font-size: x-small;
+}
+
 /* Desktops and laptops ----------- */
 @media only screen 
 and (min-width : 1224px) {
@@ -194,9 +202,13 @@ and (min-width : 1224px) {
     height: 80vh;
     border-top: 1px solid var(--secondary);
   }
-  .container60vh{
-    height: 60vh;
+  .container50vh{
+    height: 50vh;
     border-top: 1px solid var(--secondary);
+  }
+  .container10vh{
+    height: 10vh;
+    /* border-top: 1px solid var(--secondary); */
   }
   #Home-Header{
     width: 40%;
@@ -204,5 +216,23 @@ and (min-width : 1224px) {
     bottom: 65vh;
     right: 3%;
     margin-top: 5vh;
+  }
+
+  #carouselExampleIndicators{
+    width:80%;
+    height:70vh;
+  }
+
+  #design-by{
+    text-align: right;
+  }
+
+  #dev-website{
+    text-align: left;
+  }
+
+  .row>* {
+    padding-right: 0;
+    padding-left: 0;
   }
 }
