@@ -11,7 +11,7 @@
 
     <!-- add custom functions -->
     <script src="script-main.js"></script>
-    
+
     <!-- globally declare getRecaptchaResponse -->
     <script>window.getRecaptchaResponse= getRecaptchaResponse;</script>
 
@@ -93,7 +93,7 @@
               </div>
               <div class="modal-body">
               <!-- ################## CONTACT ME FORM ####################### -->
-                <form action="?" method="POST">
+                <form action="?" method="POST" id = "contact-form">
                   <br/>
                   <div class="mb-2">
                     <label for="FirstName" class="form-label">First Name: </label>
@@ -122,9 +122,22 @@
                   </div>
                   <div class="g-recaptcha" data-sitekey="6Ld4-ZQhAAAAACEgadokuQ5QChNWq4WeTm1Mf4QX" data-callback='getRecaptchaResponse'></div>
                   <div class="mt-4 d-grid gap-2">
-                    <button type="submit" value="I'm Ready to Train!" class="btn btn-primary">
+                    <button id = "submit" type="submit" value="I'm Ready to Train!" class="btn btn-primary">
                       I'm Ready to Train
                     </button>
+                    <script>
+                      let form = document.getElementById("contact-form")
+                      let element  = document.getElementById("submit")
+                      element.addEventListener("click", function(){
+                        response = checkRecaptchaResponse()
+                        if (response){
+                        form.submit()
+                      }
+                      else{
+                        console.log("Cannot submit.. you are a robot")
+                      }
+                    })
+                    </script>
                   </div>
                 </form>
               </div>

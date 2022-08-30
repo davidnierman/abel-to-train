@@ -17,6 +17,22 @@ function TestEnvVarsLoad(){
   console.log("env vars: ")
 };
 
+let RecaptchaResponse = ""
+
 function getRecaptchaResponse(response){
   console.log("Recaptcha Response: ", response)
+  RecaptchaResponse = response
 };
+
+function checkRecaptchaResponse(){
+  if (RecaptchaResponse){
+    console.log("Ready to Submit")
+    console.log("RecaptchaResponse: ", RecaptchaResponse)
+    return true
+  }
+  else{
+    console.log("Are you a robot?", RecaptchaResponse)
+    return false
+  }
+}
+
