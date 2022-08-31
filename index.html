@@ -98,7 +98,7 @@
               </div>
               <div class="modal-body">
               <!-- ################## CONTACT ME FORM ####################### -->
-                <form action="?" method="POST" id = "contact-form">
+                <form data-gf-url="https://docs.google.com/forms/d/e/1FAIpQLSeRGASe2kqciFIX6QyUj7PJ-DyfvsS6i5k0oouYAxgJ3jNISw/viewform?usp=pp_url&entry.129741217=FirstName&entry.1375178177=LastName&entry.1862979446=Email&entry.1170428579=phone&entry.1560981278=Training-Preference">
                   <br/>
                   <div class="mb-2">
                     <label for="FirstName" class="form-label">First Name: </label>
@@ -118,7 +118,7 @@
                   </div>
                   <label for="inputGroupSelect01">What are you interested in?</label>
                   <div class="input-group mb-2">
-                    <select class="form-select" name="Training Preference" id="inputGroupSelect01">
+                    <select class="form-select" name="Training-Preference" id="inputGroupSelect01">
                       <option selected>Choose...</option>
                       <option value="Private One-on-One Personal Training">Private One-on-One Personal Training</option>
                       <option value="Semi-Private Training">Semi-Private Training</option>
@@ -153,7 +153,36 @@
           </div>
         </div>
         <!-- ##########################   END OF BOOK CONSULTATION MODAL    ##########################-->
-    
+        
+        <!-- ##########################   SCRIPT TO SEND FORM TO GOOGLE FORMS/SHEETS    ##########################-->
+        <script type="text/javascript">
+          window.addEventListener("load", function () {
+            const form = document.getElementById("contact-form");
+            
+            form.addEventListener("submit", function ( event ) {
+              event.preventDefault();
+              sendData();
+            } );
+             
+            function sendData() {
+              const FD = new FormData(form);
+         
+              let url = form.dataset.gfUrl;
+              for(let [key, value] of FD) {
+                url = url.replace(key, value);
+              }
+         
+              let opts = {
+                 method: "POST",
+                 mode: "no-cors",
+                 redirect: "follow", 
+                 referrer: "no-referrer"
+               }
+         
+               return fetch(url, opts).then(alert('Success')).catch((e) => {alert('Error:', e);});
+            }
+          } );
+         </script>
 
         <!-- ##########################       HOME       ##########################-->
 
