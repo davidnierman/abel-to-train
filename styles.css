@@ -112,6 +112,7 @@ html {
 nav, body{
   background-color: var(--primary);
   border-bottom: 1px solid var(--secondary);
+  font-family: "Dosis", sans-serif;
 }
 
 .bg { 
