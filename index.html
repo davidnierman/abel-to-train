@@ -98,7 +98,7 @@
               </div>
               <div class="modal-body">
               <!-- ################## CONTACT ME FORM ####################### -->
-                <form data-gf-url="https://docs.google.com/forms/d/e/1FAIpQLSeRGASe2kqciFIX6QyUj7PJ-DyfvsS6i5k0oouYAxgJ3jNISw/viewform?usp=pp_url&entry.129741217=FirstName&entry.1375178177=LastName&entry.1862979446=Email&entry.1170428579=phone&entry.1560981278=TrainingPreference">
+                <form data-gf-url="https://docs.google.com/forms/d/e/1FAIpQLSeRGASe2kqciFIX6QyUj7PJ-DyfvsS6i5k0oouYAxgJ3jNISw/formResponse?&entry.129741217=firstName&entry.1375178177=lastName&entry.1862979446=email&entry.1170428579=phone&entry.1560981278=training+preference&submit=SUBMIT">
                   <br/>
                   <div class="mb-2">
                     <label for="FirstName" class="form-label">First Name: </label>
@@ -130,7 +130,7 @@
                   </div>
                   <div class="g-recaptcha" data-sitekey="6Ld4-ZQhAAAAACEgadokuQ5QChNWq4WeTm1Mf4QX" data-callback='getRecaptchaResponse'></div>
                   <div class="mt-4 d-grid gap-2">
-                    <input type = "submit" value="I'm Ready to Train!" class="btn btn-primary"/>
+                    <input id = "submit" type = "submit" value="I'm Ready to Train!" class="btn btn-primary"/>
                     <script>
                       let form = document.getElementById("contact-form")
                       let element  = document.getElementById("submit")
@@ -156,7 +156,6 @@
         <script type="text/javascript">
           window.addEventListener("load", function () {
             const form = document.querySelector("form");
-            console.log('HERE IS THE FORM: ', form)
             
             form.addEventListener("submit", function ( event ) {
               event.preventDefault();
