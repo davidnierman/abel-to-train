@@ -179,7 +179,7 @@
          
                return fetch(url, opts)
                .then(alert('“Thank you for your interest in AbelToTrain. I’ll contact you shorty!”'))
-               .then(document.getElementById("exampleModal").classList.remove("show"))
+               .then(closeModal())
                .catch((e) => {alert('Error:', e);});
             }
           } );
