@@ -14,7 +14,7 @@ function changeD(buttonId, pathId, pathDrawnA, pathDrawnB){
 };
 
 function closeModal() {
-  document.getElementsByClassName("modal-backdrop").style.display = "none"
+  document.getElementsByClassName("modal-backdrop").classList.remove("show")
   document.getElementById("exampleModal").style.display = "none"
   document.getElementById("exampleModal").classList.remove("show")
 }
