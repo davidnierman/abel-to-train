@@ -1,4 +1,3 @@
-/* VARS */
 /* #################################################### */
 /*                      COLORS                          */
 /* #################################################### */
@@ -11,52 +10,36 @@
   --pale-silver: #bfb7b6ff;
   --cultured: #f1f2eeff;
 
-  /* Color Palette Blues and a White */
-  --prussian-blue: #13293dff;
-  --sapphire-blue: #006494ff;
-  --cg-blue: #247ba0ff;
-  --carolina-blue: #1b98e0ff;
-  --alice-blue: #e8f1f2ff;
-
-  /* Color Palette Brown with a light blue and grey */
-  --black-chocolate: #0f1108ff;
-  --black-chocolate-2: #241909ff;
-  --fluorescent-blue: #00f6edff;
-  --beau-blue: #cad8deff;
-  --umber: #645853ff;
-
-/* Color Palette Black, Blue and Brownish Pink  */
-  --black: #000000ff;
-  --dodger-blue: #1098f7ff;
-  --white: #ffffffff;
-  --silver-pink: #b89e97ff;
-  --queen-pink: #deccccff;
-
-/* Colors organized by object size */
+/* Colors set to variables --> this will make it easier to change color palettes in future */
 --primary: var(--charcoal);
 --secondary: var(--mindaro);
 --tertiary: var(--cultured);
 --quaternary: var(--battleship-grey)
 }
 
-.navbar-nav .nav-link.active, .navbar-nav .show>.nav-link{
-  color: var(--tertiary);
+/* #################################################### */
+/*                      HTML & Body                     */
+/* #################################################### */
+
+html {
+  height: 100%;
 }
 
-.fa-bars{
-  color: var(--secondary);
-  font-size:28px;
-}
-
-.secondary-color, .secondary-color:hover{
-  color:var(--secondary)
-}
-
-
-.modal-header, .modal-body{
+body{
   background-color: var(--primary);
+  /* font-family: "Dosis";
+  font-family: "Archivo Narrow"; */
+  /* font-family: "Bayon"; */
+  font-family: "Big Shoulders Stencil ";
 }
 
+/* #################################################### */
+/*                      Nav                             */
+/* #################################################### */
+
+/* .navbar-nav, .nav-link.active, .navbar-nav.show>.nav-link{
+  color: var(--tertiary);
+ } */
 
 .navbar-toggler{
   outline: 0;
@@ -64,10 +47,38 @@
   border-color: var(--secondary);
 }
 
-.fixed-bottom{
-  margin: 1vh;
-  left:28vh;
+#navbar{
+  background-color: var(--primary);
+  border-bottom: 1px solid var(--secondary);
 }
+
+.nav-link{
+  color:var(--secondary)
+}
+
+/* brand/company name in nav (top left) */
+.navbar-brand{
+  color:var(--secondary);
+}
+
+/* Hamburger Menu/Bars */
+/* aka - Font Awesome Bars */
+.fa-bars{
+  color: var(--secondary);
+  font-size:28px;
+}
+
+/* #################################################### */
+/*                      Modal                           */
+/* #################################################### */
+
+.modal-header, .modal-body{
+  background-color: var(--primary);
+}
+
+/* #################################################### */
+/*                      Button(s)                       */
+/* #################################################### */
 
 .btn-primary{
   background-color: var(--primary);
@@ -95,48 +106,66 @@
   color: var(--tertiary);
 }
 
-.nav-link{
-  color:var(--secondary)
+/* this is for the button on mobile only to open form/modal "Schedule a FREE Consult!"*/
+.fixed-bottom{
+  margin: 1vh;
+  left:28vh
 }
 
-.navbar-brand{
-  color:var(--secondary);
-}
+/* #################################################### */
+/*                      Headers                         */
+/* #################################################### */
 
-h1, h4{
+
+h1{
   color: var(--secondary);
   margin-top: 2%;
-
-}
-
-html {
-  height: 100%;
-}
-
-nav, body{
-  background-color: var(--primary);
-  border-bottom: 1px solid var(--secondary);
-  font-family: "Archivo Narrow";
-}
-
-.bg { 
-  height: 100%;
-  width: 100%;
-  filter: brightness(60%);
 }
 
 h4{
+  color: var(--secondary);
   margin: 5vh;
-  /* padding-bottom: 5vh;; */
-  /* border-bottom: 1px solid rgba(181, 91, 26, 1); */
 }
+
+/* #################################################### */
+/*       Paragraphs / Texts/ Quotes / Citations         */
+/* #################################################### */
+
 p{
   /* letter-spacing: 5px; */
   line-height: 2;
   word-spacing: 2;
+  font-size: medium;
   align-content: center;
   color: var(--secondary);
 }
+
+.testimonial{
+  line-height: 2;
+  word-spacing: 2;
+  font-size: medium;
+}
+
+.blockquote-footer, cite{
+  color: var(--tertiary);
+}
+
+/* #################################################### */
+/*                      Images                          */
+/* #################################################### */
+
+.background-image { 
+  height: 100%;
+  width: 100%;
+}
+
+.img-thumbnail{
+  margin-top: 3vh;
+}
+
+/* #################################################### */
+/*                      Accordion                       */
+/* #################################################### */
 
 .accordion-button{
   display: block;  
@@ -152,12 +181,29 @@ p{
   color:var(--secondary);
 }
 
+/* #################################################### */
+/*                        Carousel                      */
+/* #################################################### */
+
+.review-carousel{
+  width: 95vh;
+}
+
+small{
+  font-size: x-small;
+}
+
+/* #################################################### */
+/*                        Cards                          */
+/* #################################################### */
+
 .card{
   border-color: var(--secondary);
 }
 
 .card-header{
   background-color: var(--secondary);
+  font-weight: bold;
 }
 
 .card-body{
@@ -165,28 +211,18 @@ p{
 }
 
 .card-text{
-  color: var(--primary)
+  color: var(--primary);
+  font-size: large;
 }
 
-.review-carousel{
-  width: 95vh;
-}
+/* #################################################### */
+/*          Positioning for Desktops/Laptops            */
+/* #################################################### */
 
-.blockquote-footer, cite{
-  color: var(--tertiary);
-}
-
-.img-thumbnail{
-  margin-top: 3vh;
-}
-
-small{
-  font-size: x-small;
-}
-
-/* Desktops and laptops ----------- */
 @media only screen 
 and (min-width : 1200px) {
+
+  /* ###############       Containers       ############*/
   .container150vh{
     height: 150vh;
     border-top: 1px solid var(--secondary);
@@ -213,21 +249,24 @@ and (min-width : 1200px) {
   }
   .container15vh{
     height: 15vh;
-    /* border-top: 1px solid var(--secondary); */
-  }
-  #Home-Header{
-    width: 40%;
-    position: absolute;
-    bottom: 65vh;
-    right: 3%;
-    margin-top: 5vh;
   }
 
+  /* ###############      Slogan        ############*/
+
+  #Slogan{
+    width: 40%;
+    position: absolute;
+    bottom: 68vh;
+    right: 3%;
+  }
+
+ /* ###############      Carousel        ############*/
   #carouselExampleIndicators{
     width:80%;
     height:70vh;
   }
 
+  /* #############   Footer/Recognition  ############*/
   #design-by{
     text-align: right;
   }

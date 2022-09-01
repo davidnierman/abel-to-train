@@ -13,9 +13,6 @@ function changeD(buttonId, pathId, pathDrawnA, pathDrawnB){
   }
 };
 
-function closeModal() {
-  v
-}
 
 let RecaptchaResponse = ""
 
