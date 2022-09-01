@@ -13,10 +13,6 @@ function changeD(buttonId, pathId, pathDrawnA, pathDrawnB){
   }
 };
 
-function TestEnvVarsLoad(){
-  console.log("env vars: ")
-};
-
 let RecaptchaResponse = ""
 
 function getRecaptchaResponse(response){

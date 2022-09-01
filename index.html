@@ -132,12 +132,12 @@
                   <div class="mt-4 d-grid gap-2">
                     <input id = "submit" type = "submit" value="I'm Ready to Train!" class="btn btn-primary"/>
                     <script>
-                      let form = document.getElementById("contact-form")
+                      let form = document.querySelector("form")
                       let element  = document.getElementById("submit")
                       element.addEventListener("click", function(){
                         response = checkRecaptchaResponse()
                         if (response){
-                        form.submit()
+                        console.log("You are human and may submit the form")
                       }
                       else{
                         console.log("Cannot submit.. you are a robot")
@@ -177,7 +177,10 @@
                  referrer: "no-referrer"
                }
          
-               return fetch(url, opts).then(alert('Success')).catch((e) => {alert('Error:', e);});
+               return fetch(url, opts)
+               .then(alert('“Thank you for your interest in AbelToTrain. I’ll contact you shorty!”'))
+               .then(document.getElementById("exampleModal").classList.remove("show"))
+               .catch((e) => {alert('Error:', e);});
             }
           } );
          </script>
