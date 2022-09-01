@@ -92,7 +92,7 @@
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog bg-dark rounded">
             <script>
-              let exampleModal = new bootstrap.Modal(document.getElementById('exampleModal'), options)
+              let exampleModal = new bootstrap.Modal(document.getElementById('exampleModal'),)
               window.exampleModal = exampleModal
             </script>
             <div class="modal-content bg-dark text-white">
@@ -163,7 +163,7 @@
             
             form.addEventListener("submit", function ( event ) {
               event.preventDefault();
-              sendData();
+              form.sendData();
             } );
              
             function sendData() {
