@@ -179,8 +179,8 @@
          
                return fetch(url, opts)
                .then(alert('“Thank you for your interest in AbelToTrain. I’ll contact you shorty!”'))
-               .then( myModal = new bootstrap.Modal(document.getElementById('myModal')),
-               myModal.show
+               .then( myModal = new bootstrap.Modal(document.getElementById('exampleModal')),
+               myModal.hide()
                )
                .catch((e) => {alert('Error:', e);});
             }
