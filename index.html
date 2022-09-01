@@ -91,6 +91,9 @@
         <!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog bg-dark rounded">
+            <script>
+              let exampleModal = new bootstrap.Modal(document.getElementById('exampleModal'), options)
+            </script>
             <div class="modal-content bg-dark text-white">
               <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel">Contact Info</h5>
@@ -179,9 +182,7 @@
          
                return fetch(url, opts)
                .then(alert('“Thank you for your interest in AbelToTrain. I’ll contact you shorty!”'))
-               .then( myModal = new bootstrap.Modal(document.getElementById('exampleModal')),
-               myModal.hide()
-               )
+               .then(exampleModal.hide())
                .catch((e) => {alert('Error:', e);});
             }
           } );
