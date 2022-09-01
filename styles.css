@@ -30,7 +30,7 @@ body{
   /* font-family: "Dosis";
   font-family: "Archivo Narrow"; */
   /* font-family: "Bayon"; */
-  font-family: "Big Shoulders Stencil ";
+  font-family: "Big Shoulders Stencil";
 }
 
 /* #################################################### */
@@ -223,20 +223,8 @@ small{
 and (min-width : 1200px) {
 
   /* ###############       Containers       ############*/
-  .container150vh{
-    height: 150vh;
-    border-top: 1px solid var(--secondary);
-  }
-  .container120vh{
-    height: 120vh;
-    border-top: 1px solid var(--secondary);
-  }
-  .container100vh{
-    height: 100vh;
-    border-top: 1px solid var(--secondary);
-  }
-  .container90vh{
-    height: 90vh;
+
+  .container-fluid{
     border-top: 1px solid var(--secondary);
   }
   .container80vh{
