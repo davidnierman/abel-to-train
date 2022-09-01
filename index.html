@@ -182,7 +182,9 @@
                .then(
                 document.getElementsByClassName("modal-backdrop").classList.remove("show"),
                 document.getElementById("exampleModal").style.display = "none",
-                document.getElementById("exampleModal").classList.remove("show")
+                document.getElementById("exampleModal").classList.remove("show"),
+                console.log(document.getElementsByClassName("modal-backdrop"),
+                console.log(document.getElementById("exampleModal")),
                )
                .catch((e) => {alert('Error:', e);});
             }
