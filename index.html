@@ -163,7 +163,7 @@
                       <option value="Sports Rehab and Injury Prevention">Sports Rehab and Injury Prevention</option>
                     </select>
                   </div>
-                  <div class="g-recaptcha" data-sitekey="6Ld4-ZQhAAAAACEgadokuQ5QChNWq4WeTm1Mf4QX" data-callback='getRecaptchaResponse'></div>
+                  <div class="g-recaptcha" data-sitekey="6Ld4-ZQhAAAAACEgadokuQ5QChNWq4WeTm1Mf4QX" callback=getRecaptchaResponse></div>
                   <div class="mt-4 d-grid gap-2">
                     <input id = "submit" type = "submit" value="I'm Ready to Train!" class="btn btn-primary"/>
                   </div>
@@ -579,7 +579,7 @@
 
 
           // globally declare getRecaptchaResponse 
-          // window.getRecaptchaResponse= getRecaptchaResponse;
+          window.getRecaptchaResponse= getRecaptchaResponse;
 
           // activate modal
           let contactFormModal = new bootstrap.Modal(document.getElementById('contactFormModal'),)
