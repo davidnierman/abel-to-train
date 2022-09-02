@@ -10,7 +10,7 @@ function checkRecaptchaResponse(response){
     return true
   }
   else{
-    console.log("Are you a robot?", response)
+    console.log("Are you a robot?")
     return false
   }
 }
