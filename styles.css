@@ -27,10 +27,10 @@ html {
 
 body{
   background-color: var(--primary);
-  /* font-family: "Dosis";
-  font-family: "Archivo Narrow"; */
-  /* font-family: "Bayon"; */
-  font-family: "Big Shoulders Stencil";
+  /* font-family: "Dosis"; */
+  /* font-family: "Archivo Narrow";  */
+  font-family: "Bayon";
+  /* font-family: "Big+Shoulders+Inline"; */
 }
 
 /* #################################################### */
@@ -249,7 +249,7 @@ and (min-width : 1200px) {
   }
 
  /* ###############      Carousel        ############*/
-  #carouselExampleIndicators{
+  #testimonialCarouselIndicators{
     width:80%;
     height:70vh;
   }
