@@ -357,11 +357,6 @@
             <br>
           </div>
         </div>
-            <!-- Add Event Listeners to change arrows when drop-downs are expanded / contracted -->
-            <script>
-              addTrainingAccordionDropDownListeners()
-            </script>
-
     <!-- #####################################################################-->
     <!--                                 ABOUT                                -->
     <!-- #####################################################################-->  
@@ -395,13 +390,13 @@
                     // Activate Carousel
                     const carouselAboutMeElement = document.querySelector('.carousel')
                     const carousel = new bootstrap.Carousel(carouselAboutMeElement, {
-                    interval: 5000,
+                    interval: 6000,
                     keyboard: true,
                     pause:"hover",
                     ride:"carousel",
                     wrap:true
                     })
-                    console.log("this is the carousel object that should be activated: ", carousel)
+                    
                     </script>
                   </div>
                 </div>
@@ -611,8 +606,18 @@
                 </div>
                 <br>
               </div>
+    <!-- #####################################################################-->
+    <!--                                SCRIPT                                -->
+    <!-- #####################################################################--> 
+        <script>
+          // Add Event Listeners to change arrows when drop-downs are expanded / contracted -->
+          addTrainingAccordionDropDownListeners()
+        </script>
+
       <body>
     </div>
+
+
 
     <!-- #####################################################################-->
     <!--                                FOOTER                                -->
