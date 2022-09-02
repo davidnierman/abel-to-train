@@ -601,8 +601,7 @@
           let form = document.querySelector("form")
           let element  = document.getElementById("submit")
           element.addEventListener("click", function(){
-              response = checkRecaptchaResponse()
-              if (response){
+              if (checkRecaptchaResponse()){
               console.log("You are human, submiting the form now")
               event.preventDefault();
               sendData()
