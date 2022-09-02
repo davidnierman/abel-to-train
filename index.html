@@ -163,7 +163,7 @@
                       <option value="Sports Rehab and Injury Prevention">Sports Rehab and Injury Prevention</option>
                     </select>
                   </div>
-                  <div class="g-recaptcha" data-sitekey="6Ld4-ZQhAAAAACEgadokuQ5QChNWq4WeTm1Mf4QX" data-callback='checkRecaptchaResponse'></div>
+                  <div class="g-recaptcha" data-sitekey="6Ld4-ZQhAAAAACEgadokuQ5QChNWq4WeTm1Mf4QX" data-callback='getRecaptchaResponse'></div>
                   <div class="mt-4 d-grid gap-2">
                     <input id = "submit" type = "submit" value="I'm Ready to Train!" class="btn btn-primary"/>
                   </div>
@@ -578,8 +578,8 @@
         <script>
 
 
-          // globally declare checkRecaptchaResponse 
-          window.checkRecaptchaResponse = checkRecaptchaResponse;
+          // globally declare getRecaptchaResponse 
+          window.getRecaptchaResponse= getRecaptchaResponse;
 
           // activate modal
           let contactFormModal = new bootstrap.Modal(document.getElementById('contactFormModal'),)
@@ -598,48 +598,21 @@
           wrap:true
           })
 
-          // make Recaptcha required
-          recaptcha = document.querySelector('#g-recaptcha')
-          recaptcha.setAttribute("required", "required")
-
           // check to see if form is filled out correct and send data
           let form = document.querySelector("form")
           let element  = document.getElementById("submit")
           element.addEventListener("click", function(){
-              let human = checkRecaptchaResponse(response)
+              let human = getRecaptchaResponse()
               if (human){
               console.log("You are human, submiting the form now")
               event.preventDefault();
               sendData()
             }
             else{
+              contactFormModal.show();
               console.log("Cannot submit.. Please complte the Recaptcha Quiz")
             }
           })
-
-          // sends contact form data
-          function sendData() {
-            const FD = new FormData(form);
-
-            let url = form.dataset.gfUrl;
-            for(let [key, value] of FD) {
-              url = url.replace(key, value);
-            }
-            console.log("url: ", url)
-
-            let opts = {
-              method: "POST",
-              mode: "no-cors",
-              redirect: "follow", 
-              referrer: "no-referrer"
-            }
-
-            return fetch(url, opts)
-            .then(alert('“Thank you for your interest in AbelToTrain. I’ll contact you shorty!”'))
-            .then(contactFormModal.hide())
-            .then(console.log("FORM HAS BEEN SUBMITTED!"))
-            .catch((e) => {alert('Error:', e);});
-          }
 
         </script>
 
