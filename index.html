@@ -579,7 +579,7 @@
 
 
           // globally declare recaptchaResponseData 
-          // window.recaptchaResponseData= recaptchaResponseData;
+          window.recaptchaResponseData= recaptchaResponseData;
 
           // activate modal
           let contactFormModal = new bootstrap.Modal(document.getElementById('contactFormModal'),)
@@ -598,18 +598,17 @@
           wrap:true
           })
 
-          // check to see if form is filled out correct and send data
+          // check to see if Recaptcha is complete and send data
           let form = document.querySelector("form")
           let submit  = document.getElementById("submit")
           submit.addEventListener("click", function(){
-              if (typeof recaptchaResponseData != "undefined"){
+              if (recaptchaResponseData()){
               console.log("recaptchaResponseData: ", recaptchaResponseData)
               console.log("You are human, submiting the form now")
               event.preventDefault();
               sendData()
             }
             else{
-              contactFormModal.show();
               console.log("Cannot submit.. Please complte the Recaptcha Quiz")
             }
           })

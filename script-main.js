@@ -2,7 +2,7 @@
 //                              FORM  FUNCTIONS                              
 // #####################################################################
 
-function getRecaptchaResponse(response = ""){
+function recaptchaResponseData(response){
   console.log("response: ", typeof response)
   if (typeof response !== "undefined"){
     return true
