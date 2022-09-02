@@ -2,11 +2,9 @@
 //                              FORM  FUNCTIONS                              
 // #####################################################################
 
-let response = false
-
 function getRecaptchaResponse(response){
-  console.log("response: ", response)
-  if (response){
+  console.log("response: ", typeof response)
+  if (typeof response !== "undefined"){
     return true
   }
   else{
