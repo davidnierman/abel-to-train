@@ -5,6 +5,7 @@
 let response = false
 
 function getRecaptchaResponse(response){
+  console.log("response: ", response)
   if (response){
     return true
   }
