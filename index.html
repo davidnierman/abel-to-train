@@ -577,6 +577,7 @@
     <!-- #####################################################################--> 
         <script>
 
+
           // globally declare checkRecaptchaResponse 
           window.checkRecaptchaResponse = checkRecaptchaResponse;
 
@@ -596,6 +597,10 @@
           ride:"carousel",
           wrap:true
           })
+
+          // make Recaptcha required
+          recaptcha = document.querySelector('#g-recaptcha')
+          recaptcha.setAttribute("required", "required")
 
           // check to see if form is filled out correct and send data
           let form = document.querySelector("form")
