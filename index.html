@@ -579,7 +579,7 @@
 
 
           // globally declare recaptchaResponseData 
-          window.recaptchaResponseData= recaptchaResponseData;
+          window.recaptchaResponseData = recaptchaResponseData;
 
           // activate modal
           let contactFormModal = new bootstrap.Modal(document.getElementById('contactFormModal'),)
@@ -603,7 +603,6 @@
           let submit  = document.getElementById("submit")
           submit.addEventListener("click", function(){
               if (recaptchaResponseData()){
-              console.log("recaptchaResponseData: ", recaptchaResponseData)
               console.log("You are human, submiting the form now")
               event.preventDefault();
               sendData()
