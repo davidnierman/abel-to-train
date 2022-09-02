@@ -603,8 +603,8 @@
           element.addEventListener("click", function(){
               if (checkRecaptchaResponse()){
               console.log("You are human, submiting the form now")
-              event.preventDefault();
-              sendData()
+              // event.preventDefault();
+              // sendData()
             }
             else{
               console.log("Cannot submit.. Please complte the Recaptcha Quiz")
@@ -630,6 +630,7 @@
             return fetch(url, opts)
             .then(alert('“Thank you for your interest in AbelToTrain. I’ll contact you shorty!”'))
             .then(contactFormModal.hide())
+            .then(console.log("FORM HAS BEEN SUBMITTED!"))
             .catch((e) => {alert('Error:', e);});
           }
 
