@@ -4,6 +4,7 @@
 
 // this function checks and confirms Recaptcha Response
 function checkRecaptchaResponse(response){
+  console.log("running: checkRecaptchaResponse")
   if (response){
     console.log("Ready to Submit")
     console.log("RecaptchaResponse: ", response)
@@ -66,7 +67,6 @@ function addTrainingAccordionDropDownListeners(){
 // this function allows the attribute "d" to be changed when "aria-expanded" boolean changes
 // The d attribute defines a path to be drawn.
 function changeD(buttonId, pathId, pathDrawnA, pathDrawnB){
-  console.log("Running ChangeD")
   const button = document.getElementById(buttonId)
   const path = document.getElementById(pathId)
   let expanded = button.getAttribute("aria-expanded")
