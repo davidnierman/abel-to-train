@@ -2,39 +2,17 @@
 //                              FORM  FUNCTIONS                              
 // #####################################################################
 
-function recaptchaResponseData(response){
-  console.log("response: ", typeof response)
-  if (typeof response !== "undefined"){
-    return true
-  }
-  else{
-    return false
-  }
-}
+// function recaptchaResponseData(response){
+//   console.log("response: ", typeof response)
+//   if (typeof response !== "undefined"){
+//     return true
+//   }
+//   else{
+//     return false
+//   }
+// }
 
-// sends contact form data
-function sendData() {
-  const FD = new FormData(form);
 
-  let url = form.dataset.gfUrl;
-  for(let [key, value] of FD) {
-    url = url.replace(key, value);
-  }
-  console.log("url: ", url)
-
-  let opts = {
-    method: "POST",
-    mode: "no-cors",
-    redirect: "follow", 
-    referrer: "no-referrer"
-  }
-
-  return fetch(url, opts)
-  .then(alert('“Thank you for your interest in AbelToTrain. I’ll contact you shorty!”'))
-  .then(contactFormModal.hide())
-  .then(console.log("FORM HAS BEEN SUBMITTED!"))
-  .catch((e) => {alert('Error:', e);});
-}
 
 //  ####################################################################
 //                              DOM MANIPULATION                             

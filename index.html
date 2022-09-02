@@ -579,7 +579,7 @@
 
 
           // globally declare recaptchaResponseData 
-          window.recaptchaResponseData = recaptchaResponseData;
+          // window.recaptchaResponseData = recaptchaResponseData;
 
           // activate modal
           let contactFormModal = new bootstrap.Modal(document.getElementById('contactFormModal'),)
@@ -600,18 +600,41 @@
 
           // check to see if Recaptcha is complete and send data
           let form = document.querySelector("form")
-          let submit  = document.getElementById("submit")
-          submit.addEventListener("click", function(){
-              if (recaptchaResponseData()){
-              console.log("You are human, submiting the form now")
+          form.addEventListener("submit", function(event){
+            if (grecaptcha.getResponse() === '') {                            
+              event.preventDefault();
+              alert('Please complete the recaptcha quiz');
+            }
+            else{
               event.preventDefault();
               sendData()
             }
-            else{
-              console.log("Cannot submit.. Please complte the Recaptcha Quiz")
-            }
-          })
+            });
 
+            // sends contact form data
+            function sendData() {
+              const FD = new FormData(form);
+
+              let url = form.dataset.gfUrl;
+              for(let [key, value] of FD) {
+                url = url.replace(key, value);
+              }
+              console.log("url: ", url)
+
+              let opts = {
+                method: "POST",
+                mode: "no-cors",
+                redirect: "follow", 
+                referrer: "no-referrer"
+              }
+
+              return fetch(url, opts)
+              .then(alert('“Thank you for your interest in AbelToTrain. I’ll contact you shorty!”'))
+              .then(contactFormModal.hide())
+              .then(console.log("FORM HAS BEEN SUBMITTED!"))
+              .catch((e) => {alert('Error:', e);});
+            }
+          
         </script>
 
       <body>
