@@ -27,10 +27,7 @@ html {
 
 body{
   background-color: var(--primary);
-  /* font-family: "Dosis"; */
-  /* font-family: "Archivo Narrow";  */
-  font-family: "Bayon";
-  /* font-family: "Big+Shoulders+Inline"; */
+  font-family: "Archivo Narrow"; 
 }
 
 /* #################################################### */
@@ -50,6 +47,7 @@ body{
 #navbar{
   background-color: var(--primary);
   border-bottom: 1px solid var(--secondary);
+  font-family: "Bayon";
 }
 
 .nav-link{
@@ -118,13 +116,20 @@ body{
 
 
 h1{
+  font-family: "Bayon";
   color: var(--secondary);
   margin-top: 2%;
 }
 
 h4{
+  font-family: "Bayon";
   color: var(--secondary);
   margin: 5vh;
+}
+
+h5{
+  font-family: "Bayon";
+  color: var(--secondary);
 }
 
 /* #################################################### */
