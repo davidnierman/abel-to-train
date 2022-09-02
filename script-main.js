@@ -6,8 +6,7 @@
 function checkRecaptchaResponse(response){
   console.log("running: checkRecaptchaResponse")
   if (response){
-    // console.log("Ready to Submit")
-    // console.log("RecaptchaResponse: ", response)
+    console.log("Response: ", response)
     return true
   }
   else{
