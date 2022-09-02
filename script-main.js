@@ -3,7 +3,7 @@
 // #####################################################################
 
 // this function checks and confirms Recaptcha Response
-function checkRecaptchaResponse(response){
+function checkRecaptchaResponse(response = false){
   console.log("running: checkRecaptchaResponse")
   if (response){
     console.log("Response: ", response)
