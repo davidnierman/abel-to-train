@@ -1,109 +1,275 @@
-.nav-link:hover{
-  color: rgba(181, 91, 26, 1);
+/* #################################################### */
+/*                      COLORS                          */
+/* #################################################### */
+
+:root {
+  /* Color Palette Charcoal with yellow accents*/ 
+  --battleship-grey: #848c8eff;
+  --charcoal: #435058ff;
+  --mindaro: #dcf763ff;
+  --pale-silver: #bfb7b6ff;
+  --cultured: #f1f2eeff;
+
+/* Colors set to variables --> this will make it easier to change color palettes in future */
+--primary: var(--charcoal);
+--secondary: var(--mindaro);
+--tertiary: var(--cultured);
+--quaternary: var(--battleship-grey)
 }
 
-.navbar-nav .nav-link.active, .navbar-nav .show>.nav-link {
-  color: rgba(181, 91, 26, 1);
-}
-
-.navbar-toggler {
-  border: 0 solid rgba(181, 91, 26, 1);
-}
-
-.navbar-toggler:focus {
-  text-decoration: none;
-  outline: 0;
-  box-shadow: none;
-}
-
-.btn-primary{
-  background-color:  rgba(181, 91, 26, 1);
-  border-color: aliceblue;
-}
-
-.nav-link{
-  color:aliceblue;
-}
-
-.navbar-brand{
-  color:rgba(181, 91, 26, 1);
-}
-
-h1, h4{
-  color: aliceblue;
-  margin-top: 2%;
-
-}
-
+/* #################################################### */
+/*                      HTML & Body                     */
+/* #################################################### */
 
 html {
   height: 100%;
 }
 
-.orange{
-  background-color: rgba(181, 91, 26, 1);
+body{
+  background-color: var(--primary);
+  font-family: "Archivo Narrow"; 
 }
 
-.bg { 
-  height: 100%;
-  width: 100%;
-  filter: brightness(60%);
+/* #################################################### */
+/*                      NAV                             */
+/* #################################################### */
+
+/* .navbar-nav, .nav-link.active, .navbar-nav.show>.nav-link{
+  color: var(--tertiary);
+ } */
+
+.navbar-toggler{
+  outline: 0;
+  background-color: var(--primary);
+  border-color: var(--secondary);
+}
+
+#navbar{
+  background-color: var(--primary);
+  border-bottom: 1px solid var(--secondary);
+  font-family: "Bayon";
+}
+
+.nav-link{
+  color:var(--secondary)
+}
+
+/* brand/company name in nav (top left) */
+.navbar-brand{
+  color:var(--secondary);
+}
+
+/* Hamburger Menu/Bars */
+/* aka - Font Awesome Bars */
+.fa-bars{
+  color: var(--secondary);
+  font-size:28px;
+}
+
+/* #################################################### */
+/*                      MODAL                           */
+/* #################################################### */
+
+.modal-header, .modal-body{
+  background-color: var(--primary);
+}
+
+/* #################################################### */
+/*                      BUTTONS                         */
+/* #################################################### */
+
+.btn-primary{
+  background-color: var(--primary);
+  border-color: var(--secondary);
+  color: var(--secondary);
+  box-shadow: var(--bs-btn-focus-box-shadow);
+}
+
+.btn-primary:hover, .btn-primary:focus{
+  background-color: var(--secondary);
+  border-color: var(--secondary);
+  color: var(--primary);
+}
+
+.btn-scroller{
+  background-color: var(--quaternary);
+  border-color: var(--secondary);
+  color: var(--tertiary);
+  box-shadow: 0 0 1vh rgba(49,132,253);
+}
+
+.btn-scroller:hover, .btn-scroller:focus{
+  background-color: var(--quaternary);
+  border-color: var(--secondary);
+  color: var(--tertiary);
+}
+
+/* this is for the button on mobile only to open form/modal "Schedule a FREE Consult!"*/
+.fixed-bottom{
+  margin: 1vh;
+  left:28vh
+}
+
+/* #################################################### */
+/*                      HEADERS                         */
+/* #################################################### */
+
+
+h1{
+  font-family: "Bayon";
+  color: var(--secondary);
+  margin-top: 2%;
 }
 
 h4{
+  font-family: "Bayon";
+  color: var(--secondary);
   margin: 5vh;
-  /* padding-bottom: 5vh;; */
-  /* border-bottom: 1px solid rgba(181, 91, 26, 1); */
 }
+
+h5{
+  font-family: "Bayon";
+  color: var(--secondary);
+}
+
+/* #################################################### */
+/*       PARAGRAPHS / TEXTS / QUPTES /CITATIONS         */
+/* #################################################### */
+
 p{
   /* letter-spacing: 5px; */
   line-height: 2;
   word-spacing: 2;
+  font-size: medium;
   align-content: center;
-  color: aliceblue;
+  color: var(--secondary);
 }
+
+.testimonial{
+  line-height: 2;
+  word-spacing: 2;
+  font-size: medium;
+}
+
+.blockquote-footer, cite{
+  color: var(--tertiary);
+}
+
+/* #################################################### */
+/*                      IMAGES                          */
+/* #################################################### */
+
+.background-image { 
+  height: 100%;
+  width: 100%;
+}
+
+.img-thumbnail{
+  margin-top: 3vh;
+}
+
+/* #################################################### */
+/*                      Accordion                       */
+/* #################################################### */
 
 .accordion-button{
   display: block;  
   text-align: center;
-  background-color: rgba(181, 91, 26, 1);
+  background-color: var(--secondary);
   padding: 4vh;
   margin-top: 2vh;
   border-radius: 1%;
+  color: var(--primary)
 }
 
 .accordion-body{
-  color:aliceblue;
+  color:var(--secondary);
+}
+
+/* #################################################### */
+/*                        CAROUSEL                      */
+/* #################################################### */
+
+.review-carousel{
+  width: 95vh;
+}
+
+small{
+  font-size: x-small;
+}
+
+/* #################################################### */
+/*                        CARDS                          */
+/* #################################################### */
+
+.card{
+  border-color: var(--secondary);
+}
+
+.card-header{
+  background-color: var(--secondary);
+  font-weight: bold;
 }
 
 .card-body{
-  background-color: black;
+  background-color: var(--primary);
 }
 
-.card{
-  background-color: rgba(181, 91, 26, 1);
+.card-text{
+  color: var(--primary);
+  font-size: large;
 }
 
-/* Desktops and laptops ----------- */
+/* #################################################### */
+/*          POSITIONING FOR DESKTOPS/LAPTOPS            */
+/* #################################################### */
+
 @media only screen 
-and (min-width : 1224px) {
-  .container100vh{
-    height: 100vh;
-    border-top: 1px solid rgba(181, 91, 26, 1);
+and (min-width : 1200px) {
+
+  /* ###############       Containers       ############*/
+
+  .container-fluid{
+    border-top: 1px solid var(--secondary);
   }
   .container80vh{
     height: 80vh;
-    border-top: 1px solid rgba(181, 91, 26, 1);
+    border-top: 1px solid var(--secondary);
   }
-  .container60vh{
-    height: 60vh;
-    border-top: 1px solid rgba(181, 91, 26, 1);
+  .container50vh{
+    height: 50vh;
+    border-top: 1px solid var(--secondary);
   }
-  #Home-Header{
+  .container15vh{
+    height: 15vh;
+  }
+
+  /* ###############      Slogan        ############*/
+
+  #Slogan{
     width: 40%;
     position: absolute;
-    bottom: 65vh;
+    bottom: 68vh;
     right: 3%;
-    margin-top: 5vh;
+  }
+
+ /* ###############      Carousel        ############*/
+  #testimonialCarouselIndicators{
+    width:80%;
+    height:70vh;
+  }
+
+  /* #############   Footer/Recognition  ############*/
+  #design-by{
+    text-align: right;
+  }
+
+  #dev-website{
+    text-align: left;
+  }
+
+  .row>* {
+    padding-right: 0;
+    padding-left: 0;
   }
 }

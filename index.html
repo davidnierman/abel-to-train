@@ -1,11 +1,18 @@
 <!doctype html>
 <html lang="en">
+
+    <!-- #####################################################################-->
+    <!--                               HEAD                                   -->
+    <!-- #####################################################################-->
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Abel-To-Train</title>
-    <!-- ##########################    JS FILEs     ##########################-->
+    <title>AbelToTrain</title>
+    <!-- #####################################################################-->
+    <!--                               JS FILEs                               -->
+    <!-- #####################################################################-->
 
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <!-- adds icons -->
     <script src="https://kit.fontawesome.com/15443c3282.js" crossorigin="anonymous"></script>
 
@@ -14,334 +21,683 @@
 
     <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    
+    <!-- #####################################################################-->
+    <!--                               STYLE SHEETS                           -->
+    <!-- #####################################################################-->
 
-    <!-- ##########################    STYLE SHEETS     ##########################-->
     <!-- add Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-    <!-- Add custom stylesheet (overrides bootsrap) -->
+    
+    <!-- add google font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Archivo+Narrow">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bayon">
+     
+    <!-- Add custom stylesheet  - overrides bootstrap and all other stylesheets -->
     <link rel="stylesheet" href="styles.css">
+
   </head>
 
-    <!-- ##########################    NAVIGATION     ##########################-->
-    <nav id="navbar" class="navbar sticky-top navbar-expand-lg bg-dark" >
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#scrollspyHeading1">
-          <img src="https://thumbs.dreamstime.com/b/letter-logo-design-simple-modern-logo-design-letter-very-simple-black-background-color-183193944.jpg" alt="" width="30" height="24" class="d-inline-block align-text-top">
-          Abel-To-Train
+    <!-- #####################################################################-->
+    <!--                               NAVIGATION                             -->
+    <!-- #####################################################################-->
+    <nav id="navbar" class="navbar sticky-top navbar-expand-lg" >
+      <div class="container">
+        <a class="navbar-brand" href="#Home">
+          <!-- <img src="! LOGO WILL GO HERE LATER !" alt="" width="30" height="24" class="d-inline-block align-text-top"> -->
+          AbelToTrain 
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon text-white">
-            <i class="fas fa-bars" style="color:#fff; font-size:28px;"></i>
+          <span class="navbar-toggler-icon ">
+            <i class="fas fa-bars"></i>
           </span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav nav-fill w-100">
             <li class="nav-item">
-              <a class="nav-link" href="#scrollspyHeading1">
+              <a  class=" btn btn-primary p-2" href="tel:858-429-9341" >
+                (858) 429-9341
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Home">
                 Home
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#scrollspyHeading2">
+              <a class="nav-link" href="#About">
                 About
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#scrollspyHeading3">
+              <a class="nav-link" href="#Training">
                 Training
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#scrollspyHeading4">
-                Reviews
+              <a class="nav-link" href="#Testimonials">
+                Testimonials
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Certifications">
+                Certifications
               </a>
             </li>
             <li class="nav-item">
               <!-- Button trigger modal -->
-              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                Get Started Here!
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#contactFormModal">
+                Schedule a FREE Consult!
               </button>
             </li>
           </ul>
         </div>
       </div>
     </nav>
-    <!-- ##########################   END OF NAVIGATION     ##########################-->
+
+    <!-- #####################################################################-->
+    <!--                    STICKY BUTTON FOR MOBILE ONLY                     -->
+    <!-- #####################################################################-->
+
+    <div class="d-lg-none fixed-bottom">
+      <button type="button" class="btn btn-scroller" data-bs-toggle="modal" data-bs-target="#contactFormModal">
+        Schedule a FREE Consult!
+      </button>
+    </div>
+
+    <!-- #####################################################################-->
+    <!--                                BODY                                  -->
+    <!-- #####################################################################-->
+
   <body>
-    <div data-bs-spy="scroll" data-bs-target="#navbar" data-bs-root-margin="0px 0px 0px" data-bs-smooth-scroll="true" class="scrollspy-example bg-dark rounded-2" tabindex="0">
-        <!-- ##########################   CONTACT MODAL    ##########################-->
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <!-- 'scrollspy' auto-scrolls users to specfic containers after selecting nav button-->
+    <!-- 'scrollspy' -> https://getbootstrap.com/docs/5.0/components/scrollspy/ -->
+    <div data-bs-spy="scroll" data-bs-target="#navbar" data-bs-root-margin="0px 0px 0px" data-bs-smooth-scroll="true" class="rounded-2" tabindex="0">
+        
+    <!-- #####################################################################-->
+    <!--                             CONTACT MODAL                            -->
+    <!-- #####################################################################-->
+
+        <div class="modal fade" id="contactFormModal" tabindex="-1" aria-labelledby="contactFormModalLabel" aria-hidden="true">
           <div class="modal-dialog bg-dark rounded">
             <div class="modal-content bg-dark text-white">
               <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Contact Info</h5>
+                <h5 class="modal-title" id="contactFormModalLabel">Contact Info</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
-              <!-- ################## CONTACT ME FORM ####################### -->
-                <form
-                  action="https://formspree.io/f/mrgdzaly"
-                  method="POST"
-                >
+
+    <!-- #####################################################################-->
+    <!--                             CONTACT ME FORM                          -->
+    <!-- #####################################################################-->
+
+                <!-- data-gf-url links this static forms to Google Sheet: -->
+                <!-- tutorial: https://ousmane.dev/2020/05/03/googlesheet-backend-for-static-form/ -->
+                <form data-gf-url="https://docs.google.com/forms/d/e/1FAIpQLSeRGASe2kqciFIX6QyUj7PJ-DyfvsS6i5k0oouYAxgJ3jNISw/formResponse?&&entry.129741217=firstname&entry.1375178177=lastname&entry.1862979446=email&entry.1170428579=phone&entry.1560981278=trainingpreference&submit=SUBMIT">
+                  <br/>
                   <div class="mb-2">
-                    <label for="FirstName" class="form-label">First Name: </label>
-                    <input type="text" class="form-control" id="FirstName" name="FirstName" placeholder = "Jane" required>
+                    <label for="firstname" class="form-label">First Name: </label>
+                    <input type="text" class="form-control" id="firstname" name="firstname" placeholder = "Jane" required>
                   </div>
                   <div class="mb-2">
-                    <label for="LastName">Last Name:</label>
-                    <input type="text" class="form-control" id="LastName" name="LastName" placeholder = "Doe" required>
+                    <label for="lastname">Last Name:</label>
+                    <input type="text" class="form-control" id="lastname" name="lastname" placeholder = "Doe" required>
                   </div>
                   <div class="mb-2">
-                    <label for="Email">Email:</label>
-                    <input type="email" class="form-control" id="Email" name="Email" placeholder="JaneDoe@gmail.com" required>
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="JaneDoe@gmail.com" required>
                   </div>
                   <div class="mb-2">
                     <label for="phone">Phone Number: ###-###-####</label>
                     <input type="tel" class="form-control" id="phone" name="phone" placeholder = "###-###-####" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"required>
                   </div>
-                  <label for="inputGroupSelect01">How would you like to train?</label>
+                  <label for="trainingpreference">What are you interested in?</label>
                   <div class="input-group mb-2">
-                    <select class="form-select" name="Training Preference" id="inputGroupSelect01">
+                    <select class="form-select" name="trainingpreference" id="trainingpreference">
                       <option selected>Choose...</option>
-                      <option value="In Person">In Person Training</option>
-                      <option value="Online">Online Training</option>
-                      <option value="Group">Group Training</option>
+                      <option value="Private One-on-One Personal Training">Private One-on-One Personal Training</option>
+                      <option value="Semi-Private Training">Semi-Private Training</option>
+                      <option value="Small Group Training">Small Group Training</option>
+                      <option value="Nutrition Coaching">Nutrition Coaching</option>
+                      <option value="Funcitonal Movement Living With Auto-Immune Diseases">Funcitonal Movement Living With Auto-Immune Diseases</option>
+                      <option value="Sports Rehab and Injury Prevention">Sports Rehab and Injury Prevention</option>
                     </select>
                   </div>
-                    <!-- When our servers receive a submission, if the _gotcha field is filled in,
-                    we take that as a sign that a bot has submitted the form, and we silently 
-                    ignore the submission. - form spree -->
-                    <input type="text" name="_gotcha" style="display:none" />
-                  <div class=" mt-4 d-grid gap-2">
-                      <button
-                       type="submit"
-                       class="btn btn-primary">
-                        I'm Ready to Train!
-                      </button>
+                  <div class="g-recaptcha" data-sitekey="6Ld4-ZQhAAAAACEgadokuQ5QChNWq4WeTm1Mf4QX" callback-data=recaptchaResponseData></div>
+                  <div class="mt-4 d-grid gap-2">
+                    <input id = "submit" type = "submit" value="I'm Ready to Train!" class="btn btn-primary"/>
                   </div>
                 </form>
               </div>
             </div>
           </div>
         </div>
-        <!-- ##########################   END OF BOOK CONSULTATION MODAL    ##########################-->
-    
-
-        <!-- ##########################       HOME       ##########################-->
-
-        <div id="scrollspyHeading1" class="container80vh">
+    <!-- #####################################################################-->
+    <!--                                    HOME                              -->
+    <!-- #####################################################################-->
+        <div id="Home" class="container80vh">
           <!-- <div class="bg"> -->
-            <img class = bg src="images/stretch.png">
-            <div id="Home-Header">
+            <img class = "background-image" src="images/stretch.png">
+            <div id="Slogan">
               <h1 class="text-center">
-                Abel to Train
+                AbelToTrain
               </h1>
-              <p class="text-center">
-                Training customized for you!
-              </p>
+              <h5 class="text-center">
+                We Are All Able to Train to Promote A Long, Healthy Life!
+              </h5>
+              <div class="d-lg-none text-center">
+                <a  class=" btn btn-primary p-1" href="tel:858-429-9341" >
+                  (858) 429-9341
+                </a>
+              </div>
             </div>
           <!-- </div> -->
         </div>
-            
-        
-          <!-- ##########################      ABOUT       ########################## -->
-          <div id="scrollspyHeading2" class="container80vh">
+    <!-- #####################################################################-->
+    <!--                           TRAINING Offerings                         -->
+    <!-- #####################################################################-->  
+        <div id="Training" class="container-fluid">
+          <h4 class="text-center">
+            Training Offerings
+          </h4>
+          <div class="accordion" id="trainingAccordion">
+
+    <!-- #####################      PRIVATE TRAINING       ####################-->
+              
+                  <button id="privateTraining" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                    <h3 class="accordion-header" id="flush-headingOne">
+                      Private One-on-One Personal Training:
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                        <path id="privateTrainingArrow" fill-rule="evenodd" d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67z"></path>
+                      </svg>
+                    </h3>
+                  </button>
+                <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#trainingAccordion">
+                  <div class="accordion-body text-center">
+                    One hour or half hour in person or virtual sessions dedicated to you, your fitness and daily
+                    functional goals. We take in consideration any/all current pre-existing conditions and physical
+                    limitations while guaranteeing to get you moving, mobile and sweaty.
+                  </div>
+                </div>
+              
+    <!-- ######################       SEMI-PRIVATE         ##################### -->
+
+                    <button id="semiPrivateTraining" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                      <h3 class="accordion-header" id="flush-headingTwo">
+                        Semi-Private Training
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                          <path id="semiPrivateTrainingArrow" fill-rule="evenodd" d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67z"></path>
+                        </svg>
+                      </h3>
+                    </button>
+                  <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#trainingAccordion">
+                    <div class="accordion-body text-center">
+                      One hour in person or virtual sessions dedicated to couples or groups of two. Each workout is
+                      crafted and programmed with each individual goals’ in mind while providing a fun partner
+                      dynamic.
+                    </div>
+                  </div>
+
+    <!-- ###################       SMALL GROUP TRAINING       ################## -->
+
+                    <button id="smallGroupTraining" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                      <h3 class="accordion-header" id="flush-headingThree">
+                        Small Group Training
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                          <path id="smallGroupTrainingArrow" fill-rule="evenodd" d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67z"></path>
+                        </svg>
+                      </h3>
+                    </button>
+                  <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#trainingAccordion">
+                    <div class="accordion-body text-center">
+                      One hour in person sessions dedicated to groups of 3-6 people. These sessions are
+                      programmed to be equally part mobility, part strength.
+                    </div>
+                  </div>
+
+    <!-- ###################        NUTRITION COACHING         ################### -->
+
+                    <button id="nutritionCoaching" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                      <h3 class="accordion-header" id="flush-headingFour">
+                        Nutrition Coaching
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                          <path id="nutritionCoachingArrow" fill-rule="evenodd" d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67z"></path>
+                        </svg>
+                      </h3>
+                    </button>
+                  <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#trainingAccordion">
+                    <div class="accordion-body text-center">
+                      This package starts with an in-depth one hour starter session going over all of your dietary
+                      habits – from how you stock your pantry and fridge to the way you order out at restaurants.
+                      The purpose of this program is to help teach you healthier consumption habits, provide you
+                      with the tools to make educated food choices and to inspire to get yourself in the kitchen a bit
+                      more! We go over recipes that fit your lifestyle and each program is entirely customized to you
+                      and your goals. Together, we track everything from your water consumption to meals and
+                      snacks.
+                    </div>
+                  </div>
+
+    <!-- #######     FUNCTIONAL MOVEMENT LIVING WITH AUTO-IMMUNE DISEASES   ######### -->
+
+                    <button id="functionalMovementLivingWithAutoImmuneDiseases" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                      <h3 class="accordion-header" id="flush-headingFive">
+                        Functional Movement Living With Auto-Immune Diseases
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                          <path id="functionalMovementLivingWithAutoImmuneDiseasesArrow" fill-rule="evenodd" d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67z"></path>
+                        </svg>
+                      </h3>
+                    </button>
+                  <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#trainingAccordion">
+                    <div class="accordion-body text-center">
+                      Virtual or in person training sessions crafted around your individual health conditions and
+                      needs. As someone living with Crohn’s Disease, I understand that flare ups can deeply affect
+                      our daily lifestyle. These sessions are programmed with your health and functional movement
+                      in mind, to minimize flares and still provide healthy movement when you are in the middle of
+                      having one. Sessions are heavily focused on mobility and flexibility work.
+                    </div>
+                  </div>
+
+    <!-- ####################      TRAINING FOR OLDER ADULTS       ##################### -->
+
+                    <button id="trainingForOlderAdults" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven">
+                      <h3 class="accordion-header" id="flush-headingSeven">
+                        Training For Older Adults
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                          <path id="trainingForOlderAdultsArrow" fill-rule="evenodd" d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67z"></path>
+                        </svg>
+                      </h3>
+                    </button>
+                  <div id="flush-collapseSeven" class="accordion-collapse collapse" aria-labelledby="flush-headingSeven" data-bs-parent="#trainingAccordion">
+                    <div class="accordion-body text-center">
+                      One hour or half hour training sessions for the 65+ population. We work on practical exercises
+                      that help you live more safer, stronger, independent lives. Our sessions assist with fall
+                      prevention, stair climbing, grocery carrying, keeping up with the grandkids and more. Sessions
+                      are equal parts balance/mobility work and functional strength. Age is but a number!
+                    </div>
+                  </div>
+    <!-- ###################      SPORTS REHAB AND INJURY PREVENTION    ############### -->
+
+                    <button id="sportsRehabAndInjuryPrevention" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+                      <h3 class="accordion-header" id="flush-headingSix">
+                        Sports Rehab and Injury Prevention
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                          <path id="sportsRehabAndInjuryPreventionArrow" fill-rule="evenodd" d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67z"></path>
+                        </svg>
+                      </h3>
+                    </button>
+                  <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix" data-bs-parent="#trainingAccordion">
+                    <div class="accordion-body text-center">
+                      Personal training sessions targeted towards athletes, either coming off of an injury and/or
+                      those hyper focused of injury prevention. These sessions are highly focused on three-
+                      dimensional mobility work and personally tailored sports-focused exercises.
+                  </div>
+            </div>
+            <br>
+          </div>
+        </div>
+    <!-- #####################################################################-->
+    <!--                                 ABOUT                                -->
+    <!-- #####################################################################-->  
+
+          <div id="About" class="container-fluid">
             <h4 class="text-center">
               About
             </h4>
             <div class="container text-center">
               <div class="row justify-content-md-around d-flex align-items-center">
-                <div class="col-md-3 p-2 col-md-1">
+                <div class="col-md-4 p-2">
                   <div class="card ">
-                    <img src="https://www.kindpng.com/picc/m/59-596948_fitness-clipart-fit-man-individual-people-clip-art.png" class="card-img-top" alt="...">
+                    <div id="carouselAboutMe" class="carousel slide" data-ride="carousel">
+                      <!-- <div class="carousel-inner"> -->
+                        <div class="carousel-inner" role="listbox" style=" width:100%; height: 445px !important;">
+                        <div class="carousel-item active">
+                          <img src="images/Certified-Personal-Trainer.jpeg" class="card-img-top" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                          <img src="images/Grey-Outfit-Medicine-Ball.jpeg" class="card-img-top" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                          <img src="images/Red-Outfit.jpeg" class="card-img-top" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                          <img src="images/Grey-Outfit-Stretch.jpeg" class="card-img-top" alt="...">
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div class="col-md-4">
-                      <p>
-                        Some quick example text to build on the card title and make up the bulk of the card's content.
-                        This is an about section that will stuff abou the person which is about the person from it is about.
-                        The more about this person the more about the about that will about to fit in this section about them.
-                      </p>
+                <div class="col-md-6">
+                  <p>
+                    Aarin has been an athlete her entire life. From club soccer to competitive water polo to
+                    collegiate rugby at the University of Southern California, exercise and fitness has always been
+                    an important part of Aarin’s lifestyle. After being diagnosed with Crohn’s Disease in 2017, Aarin
+                    struggled with finding ways to maintain her fitness. Doing functional tasks like carrying
+                    groceries up two flights of stairs proved to be challenging. Wanting to educate and help herself
+                    get back to an active and self-sufficient lifestyle, Aarin decided to pursue an education in
+                    personal fitness. In 2018 Aarin earned her personal training certification from the American
+                    Council of Exercise (ACE).
+                  </p>
+                  <p>
+                    With her new fitness education Aarin trained herself from carrying groceries up the stairs to
+                    getting back to running a 10K races. Aarin also started training clients in Los Angeles, California,
+                    including those with fellow auto-immune diseases, showing them that a self-sufficient and
+                    active lifestyle is possible.
+                  </p>
+
+                  <p>
+                    Knowing that a healthy lifestyle is a holistic approach, Aarin decided to dive into nutritional
+                    studies. Aarin has earned her certification in Nutritional Coaching in 2020 from ACE and later on
+                    continued her education in functional movement and the benefits of cross training and
+                    preparedness by becoming a CrossFit® Level 1 Trainer in 2022.
+                  </p>
+
+                  <p>
+                    From 2021-2022 Aarin was also trained in Applied Function Science (AFS) during her time at an
+                    esteemed sports rehab and physical therapy clinic in San Diego, California. AFS emphasizes
+                    three dimensional functional movement and mobility which mirrors how we move in daily life.
+                    During her time at the clinic, Aarin greatly enjoyed her time coaching all populations but
+                    specifically older adults. Aarin finds its extremely rewarding strengthening those later in life to
+
+                    be able to achieve functional daily tasks, not much different from her love on training those
+                    living with auto-immune diseases.
+                  </p>
+            
+                  <p>
+                    When Aarin isn’t working out at her home gym you can catch her surfing, hiking, camping out of
+                    her rooftop tent (her dream is to hit every National Park in her lifetime) loving up on her
+                    Labrador Retriever mix Jesse, cooking healthy meals and dancing the night away with her
+                    friends under the techno disco ball.
+                  </p>
+
                   </div>
                 </div>
               </div>
           </div>
-            <!-- ##########################       TRAINING       ########################## -->
-            <div class="container60vh">
-              <h4 id="scrollspyHeading3" class="text-center">
-                Training
-              </h4>
-              <div class="accordion" id="accordionFlushExample">
-                  <!-- ##########################       IN PERSON TRAINING       ########################## -->
-                  
-                      <button id="inPersonTraining" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                        <h5 class="accordion-header" id="flush-headingOne">
-                          In Person Personal Training
-                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                            <path id="inPersonArrow" fill-rule="evenodd" d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67z"></path>
-                          </svg>
-                        </h5>
-                      </button>
-                    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                      <div class="accordion-body text-center">
-                        Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.
+
+    <!-- #####################################################################-->
+    <!--                              TESTIMONIALS                            -->
+    <!-- #####################################################################--> 
+
+          <div id="Testimonials" class="container-fluid">
+            <h4 class="text-center">
+              Testimonials
+            </h4>
+            <div class="container- text-center">
+              <div class="justify-content-md-around d-flex align-items-center">
+                <div id="testimonialCarouselIndicators" class="carousel review-carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#testimonialCarouselIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#testimonialCarouselIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#testimonialCarouselIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#testimonialCarouselIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarouselIndicators" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarouselIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <div class="card">
+                        <div class="card-header text-center">
+                          "She tailors the workouts to your experience level."
+                        </div>
+                        <div class="card-body">
+                          <blockquote class="blockquote mb-0">
+                            <p class = "text-center">
+                              Aarin and I met in Cape Town of all places, on a hike that nearly killed me. Between almost
+                              passing out, I learned that both of our dads are South African and we’re both writers that live in
+                              LA. A bit later I noticed that she got her personal training certificate. I really wanted to start
+                              working out again but I couldn’t find anywhere that worked with my schedule and budget. I
+                              reached out Aarin and she fit both so I started training with her. It’s been amazing. She tailors
+                              the workouts to your experience level and incorporates amazing exercises. She’s also a great
+                              motivator which is good because I can be a baby when I’m tired. I have felt myself get stronger
+                              every time we work together. She raises the intensity of the workouts when she sees you are
+                              ready for it, which gets better results. If you’re looking for a personal trainer in LA you should
+                              reach out to her! Aarin is experienced, knowledgeable, fun, and gets the results you want.
+                            </p>
+                            <footer class="blockquote-footer text-center"> <cite> Khalehla R.</cite></footer>
+                          </blockquote>
+                          <br>
+                        </div>
                       </div>
                     </div>
-                  
-                    <!-- ##########################       ONLINE PERSONAL TRAINING       ########################## -->
-
-                        <button id="onlinePersonalTraining" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                          <h5 class="accordion-header" id="flush-headingTwo">
-                            Online Personal Training
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                              <path id="onlinePersonalTrainingArrow" fill-rule="evenodd" d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67z"></path>
-                            </svg>
-                          </h5>
-                        </button>
-                      <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body text-center">
-                          Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.
+                    <div class="carousel-item">
+                      <div class="card">
+                        <div class="card-header text-center">
+                          "Super encouraging and non-judgmental energy that kept me engaged and motivated".
+                        </div>
+                        <div class="card-body">
+                          <blockquote class="blockquote mb-0">
+                            <p class = "text-center">
+                              I took a few weeks of personal training with Aarin at the start of 2020. I don’t consider myself
+                              especially athletic and it’s been difficult for me to maintain a regular and diversified exercise
+                              regimen in the past, but Aarin made our Saturday morning workouts super enjoyable and also
+                              offered really helpful nutritional coaching as well. It was a great way to reset and think about
+                              my fitness/wellness goals in a new way. Aarin has a super encouraging and non-judgmental
+                              energy that kept me engaged and motivated each week. She was super thoughtful in coming up
+                              with a workout plan and was cognizant of any injuries me or my workout buddy had as well!
+                              We even did a virtual workout post-pandemic and it was awesome!! Cannot recommend her
+                              enough and can’t wait to workout with her again!
+                            </p>
+                            <footer class="blockquote-footer text-center"> <cite>Ambrielle M.</cite></footer>
+                          </blockquote>
+                          <br>
                         </div>
                       </div>
 
-                  <!-- ##########################       GROUP TRAINING       ########################## -->
-
-                      <button id=groupTraining class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                          <h5 class="accordion-header" id="flush-headingThree">
-                            Group Training
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                              <path id="arrow" fill-rule="evenodd" d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67z"></path>
-                            </svg>
-                          </h5>
-                      </button>
-                      <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body text-center">
-                          Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.
-                        </div>
                     </div>
-                </div>
-            </div>
-
-                <!-- Add Event Listeners to change arrows when drop-downs are expanded / contracted -->
-                <script>
-                  // https://stackoverflow.com/questions/67942262/how-to-change-an-svg-image-after-onclick
-                  const upArrow = "M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67z"
-                  const downArrow = "M7.776 5.553a.5.5 0 0 1 .448 0l6 3a.5.5 0 1 1-.448.894L8 6.56 2.224 9.447a.5.5 0 1 1-.448-.894l6-3z"
-                  const inPersonTraining = document.getElementById("inPersonTraining")
-                  const onlinePersonalTraining = document.getElementById("onlinePersonalTraining")
-                  const groupTraining = document.getElementById("groupTraining")
-                  inPersonTraining.addEventListener("click", function(){
-                    changeD("inPersonTraining", "inPersonArrow", downArrow, upArrow);
-                  })
-                  onlinePersonalTraining.addEventListener("click", function(){
-                    changeD("onlinePersonalTraining", "onlinePersonalTrainingArrow", downArrow, upArrow);
-                  })
-                  groupTraining.addEventListener("click", function(){
-                    changeD("groupTraining", "arrow", downArrow, upArrow);
-                  })
-                </script>
-
-                <!-- ##########################       REVIEWS       ########################## -->
-                <div class="container80vh">
-                  <h4 id="scrollspyHeading4" class="text-center">
-                    Reviews
-                  </h4>
-                  <div class="container text-center">
-                    <div class="row justify-content-md-around gap-3">
-                      <div class="col-md-3 p-2 col-md-1">
-                        <div class="card ">
-                          <img src="https://www.kindpng.com/picc/m/59-596948_fitness-clipart-fit-man-individual-people-clip-art.png" class="card-img-top" alt="...">
-                          <div class="card-body">
-                            <p class="card-text">
-                              Some quick example text to build on the card title and make up the bulk of the card's content.
+                    <div class="carousel-item">
+                      <div class="card">
+                        <div class="card-header text-center">
+                          "I’ve seen a huge improvement in my overall wellbeing."
+                        </div>
+                        <div class="card-body">
+                          <blockquote class="blockquote mb-0">
+                            <p class = "text-center">
+                              I initially reached out to Aarin due to my sleeping issues, which I’ve struggled with for as long as
+                              I can remember. I’d seen her Instagram posts on the importance of sleep and a holistic
+                              approach to health and fitness, which seemed different from other fitness programs I’d
+                              researched. During our initial call, she really took the time to listen to my reservations and
+                              worries, given that I had a complicated, rather toxic relationship to my body, physical fitness,
+                              and food. I’m happy to say that after working with Aarin these past few months, I’ve been able
+                              to find a lot of joy in creating new healthy habits. With the new tools she’s given me, I’ve seen a
+                              huge improvement in my overall wellbeing. I’m especially grateful to partner with Aarin on my
+                              nutrition. At first, I’d been nervous about food journaling each week, but Aarin always comes
+                              into our sessions with a positive energy, while also making sure to hold me accountable to my
+                              goals. I love that she always brings new food or recipe ideas to me so that we can find what
+                              works for my lifestyle. She has always emphasized building habits rather than adhering to a
+                              specific diet. The kindness she shows me makes me want to extend that same kindness to
+                              myself and my body!
                             </p>
-                          </div>
+                            <footer class="blockquote-footer text-center"> <cite>Stella C. </cite></footer>
+                          </blockquote>
+                          <br>
                         </div>
                       </div>
-                      <div class="col-md-3 p-2 col-md-1">
-                        <div class="card">
-                          <img src="https://www.kindpng.com/picc/m/59-596948_fitness-clipart-fit-man-individual-people-clip-art.png" class="card-img-top" alt="...">
-                          <div class="card-body">
-                            <p class="card-text">
-                              Some quick example text to build on the card title and make up the bulk of the card's content.
-                            </p>
-                          </div>
+                    </div>
+                    <div class="carousel-item">
+                      <div class="card">
+                        <div class="card-header text-center">
+                          "It was the most enjoyable and dynamic personal training I’ve ever had"
                         </div>
-                      </div>
-                      <div class="col-md-3 p-2 col-md-1">
-                        <div class="card">
-                          <img src="https://www.kindpng.com/picc/m/59-596948_fitness-clipart-fit-man-individual-people-clip-art.png" class="card-img-top" alt="...">
-                          <div class="card-body">
-                            <p class="card-text">
-                              Some quick example text to build on the card title and make up the bulk of the card's content.
+                        <div class="card-body">
+                          <blockquote class="blockquote mb-0">
+                            <p class = "text-center">
+                              I’d seen Aarin’s training videos on Instagram prior to training with her and really liked the intensity 
+                              of her workouts. I like weight training exercises that leave you sweaty! Our initial meeting we planned 
+                              out goals and tracked my current diet and exercise routine. I had specific goals regarding building my 
+                              chest muscles after surgery and I found it so thoughtful and impressive how much she researched my situation. 
+                              And I did feel like my chest became more defined by the end! Aarin came to training sessions prepared and on time,
+                              and kept scheduling easy and flexible. I love getting a full body workout using minimal pieces of equipment,
+                              and even after (6) 45-minute sessions just once a week, I felt a lot more confident about continuing routines
+                              like this on my own. It was the most enjoyable and dynamic personal training I’ve ever had
+                              (and I’ve had 3 others!)
                             </p>
-                          </div>
+                            <footer class="blockquote-footer text-center"> <cite>Nate G. </cite></footer>
+                          </blockquote>
+                          <br>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-  </body>
+              </div>
+            </div>
+            <br>
+          </div>
 
-    <!-- ##########################       FOOTER       ########################## -->
-    <footer class="text-center text-white orange">
+    <!-- #####################################################################-->
+    <!--                              CERTIFICATIONS                          -->
+    <!-- #####################################################################--> 
+
+              <div id="Certifications" class="container-fluid">
+                <h4 class="text-center">
+                  Certifications
+                </h4> 
+                    <div class="row align-items-center justify-content-md-around">
+                      <div class="col-md-3 col-sm-12">
+                        <img src="./images/certifications/hk6urpal_1655920601028.png" class="img-thumbnail" alt="...">
+                      </div>
+                      <div class="col-md-3 col-sm-12">
+                        <img src="./images/certifications/CF-L1 Credential 2022.png" class="img-thumbnail" alt="...">
+                      </div>
+                      <div class="col-md-3 col-sm-12">
+                        <img src="./images/certifications/ACE-Course-Certificate-20201231162941.png" class="img-thumbnail" alt="...">
+                      </div>
+                  </div>
+                </div>
+                <br>
+              </div>
+    <!-- #####################################################################-->
+    <!--                                SCRIPT                                -->
+    <!-- #####################################################################--> 
+        <script>
+
+
+          // globally declare recaptchaResponseData 
+          // window.recaptchaResponseData = recaptchaResponseData;
+
+          // activate modal
+          let contactFormModal = new bootstrap.Modal(document.getElementById('contactFormModal'),)
+          window.contactFormModal = contactFormModal
+
+          // Add Event Listeners to change arrows when drop-downs are expanded / contracted -->
+          addTrainingAccordionDropDownListeners()
+
+          // Activate Carousel
+          const carouselAboutMeElement = document.querySelector('.carousel')
+          const carousel = new bootstrap.Carousel(carouselAboutMeElement, {
+          interval: 6000,
+          keyboard: true,
+          pause:"hover",
+          ride:"carousel",
+          wrap:true
+          })
+
+          // check to see if Recaptcha is complete and send data
+          let form = document.querySelector("form")
+          form.addEventListener("submit", function(event){
+            if (grecaptcha.getResponse() === '') {                            
+              event.preventDefault();
+              alert('Please complete the recaptcha quiz');
+            }
+            else{
+              event.preventDefault();
+              sendData()
+            }
+            });
+
+            // sends contact form data
+            function sendData() {
+              const FD = new FormData(form);
+
+              let url = form.dataset.gfUrl;
+              for(let [key, value] of FD) {
+                url = url.replace(key, value);
+              }
+              console.log("url: ", url)
+
+              let opts = {
+                method: "POST",
+                mode: "no-cors",
+                redirect: "follow", 
+                referrer: "no-referrer"
+              }
+
+              return fetch(url, opts)
+              .then(alert('“Thank you for your interest in AbelToTrain. I’ll contact you shorty!”'))
+              .then(contactFormModal.hide())
+              .then(console.log("FORM HAS BEEN SUBMITTED!"))
+              .catch((e) => {alert('Error:', e);});
+            }
+          
+        </script>
+
+      <body>
+    </div>
+
+
+
+    <!-- #####################################################################-->
+    <!--                                FOOTER                                -->
+    <!-- #####################################################################--> 
+  
+  <footer class="text-white">
     <!-- Grid container -->
-    <div class="container orange">
+    <div class="container15vh text-center">
       <!-- Section: Social media -->
       <section>
-        <!-- Facebook -->
+
+    <!-- Google -->
         <a
-          class="btn btn-link btn-lg text-dark"
-          href="#!"
-          ><i class="fab fa-facebook-f"></i
-        ></a>
-  
-        <!-- Twitter -->
-        <a
-          class="btn btn-link btn-lg text-dark"
-          href="#!"
-          ><i class="fab fa-twitter"></i
-        ></a>
-  
-        <!-- Google -->
-        <a
-          class="btn btn-link btn-lg text-dark"
-          href="#!"
+          class="btn btn-link btn-lg text-light"
+          href="https://goo.gl/maps/oCACWCTETPeai6aU6"
           ><i class="fab fa-google"></i
         ></a>
   
-        <!-- Instagram -->
+    <!-- Instagram -->
         <a
-          class="btn btn-link btn-lg text-dark"
-          href="#!"
+          class="btn btn-link btn-lg text-light"
+          href="https://www.instagram.com/abeltotrain/?hl=en"
           ><i class="fab fa-instagram"></i
         ></a>
   
-        <!-- Linkedin -->
+    <!-- Linkedin -->
         <a
-          class="btn btn-link btn-lg text-dark"
-          href="#!"
+          class="btn btn-link btn-lg text-light"
+          href="https://www.linkedin.com/in/aarin-abel-965b6191/"
           ><i class="fab fa-linkedin"></i
         ></a>
-        <!-- Github -->
-        <!-- <a
-          class="btn btn-link btn-lg text-dark"
-          href="#!"
-          ><i class="fab fa-github"></i
-        ></a> -->
       </section>
-      <!-- Section: Social media -->
-    </div>
-    <!-- Grid container -->
-  
-    <!-- Designed by  -->
+
+    <!-- Contact Number and Email -->
+      <section>
+        <a  class="text-light" href="tel:858-429-9341" >
+          (858) 429-9341
+        </a>
+        <br>
+        <a  class="text-light" href="email:aabel@abeltotrain.com " >
+          aabel@abeltotrain.com 
+        </a>
+      </section>
+  </div>
+
+    <!-- website developer credit -->
+    <div class="text-white bg-dark">
+      <div class="row align-items-center">
+        <div id = "design-by"class="col-md-6 col-sm-12">
+          <small> Website Designed by: &nbsp;</small>
+        </div>
+        <div id = "dev-website" class="col-md-6 col-sm-12"> 
+          <a class="text-white" href="http://www.davidnierman.com/">
+            <small>davidnierman.com</small>
+          </a>
+        </div>
+      </div>
     </div>
   </footer>
-  </div>
-  <div class="text-center text-white p-3 bg-dark";>
-    <small>
-      designed by:
-    </small>
-    <a class="text-white" href="http://www.davidnierman.com/"><small>davidnierman.com</small></a>
 </html>
