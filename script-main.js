@@ -16,26 +16,6 @@ function checkRecaptchaResponse(response){
   }
 }
 
-function sendData() {
-  const FD = new FormData(form);
-
-  let url = form.dataset.gfUrl;
-  for(let [key, value] of FD) {
-    url = url.replace(key, value);
-  }
-
-  let opts = {
-     method: "POST",
-     mode: "no-cors",
-     redirect: "follow", 
-     referrer: "no-referrer"
-   }
-
-   return fetch(url, opts)
-   .then(alert('“Thank you for your interest in AbelToTrain. I’ll contact you shorty!”'))
-   .then(contactFormModal.hide())
-   .catch((e) => {alert('Error:', e);});
-}
 
 
 //  ####################################################################

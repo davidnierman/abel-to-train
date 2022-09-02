@@ -19,9 +19,6 @@
     <!-- add custom functions -->
     <script src="script-main.js"></script>
 
-    <!-- globally declare checkRecaptchaResponse -->
-    <script>window.checkRecaptchaResponse = checkRecaptchaResponse;</script>
-
     <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
     
@@ -123,10 +120,6 @@
 
         <div class="modal fade" id="contactFormModal" tabindex="-1" aria-labelledby="contactFormModalLabel" aria-hidden="true">
           <div class="modal-dialog bg-dark rounded">
-            <script>
-              let contactFormModal = new bootstrap.Modal(document.getElementById('contactFormModal'),)
-              window.contactFormModal = contactFormModal
-            </script>
             <div class="modal-content bg-dark text-white">
               <div class="modal-header">
                 <h5 class="modal-title" id="contactFormModalLabel">Contact Info</h5>
@@ -173,21 +166,6 @@
                   <div class="g-recaptcha" data-sitekey="6Ld4-ZQhAAAAACEgadokuQ5QChNWq4WeTm1Mf4QX" data-callback='checkRecaptchaResponse'></div>
                   <div class="mt-4 d-grid gap-2">
                     <input id = "submit" type = "submit" value="I'm Ready to Train!" class="btn btn-primary"/>
-                    <script>
-                      // let form = document.querySelector("form")
-                      let element  = document.getElementById("submit")
-                      element.addEventListener("click", function(){
-                        response = checkRecaptchaResponse()
-                        if (response){
-                        console.log("You are human, submiting the form now")
-                        event.preventDefault();
-                        sendData()
-                      }
-                      else{
-                        console.log("Cannot submit.. Please complte the Recaptcha Quiz")
-                      }
-                    })
-                    </script>
                   </div>
                 </form>
               </div>
@@ -386,18 +364,6 @@
                         </div>
                       </div>
                     </div>
-                    <script>
-                    // Activate Carousel
-                    const carouselAboutMeElement = document.querySelector('.carousel')
-                    const carousel = new bootstrap.Carousel(carouselAboutMeElement, {
-                    interval: 6000,
-                    keyboard: true,
-                    pause:"hover",
-                    ride:"carousel",
-                    wrap:true
-                    })
-                    
-                    </script>
                   </div>
                 </div>
                 <div class="col-md-6">
@@ -610,8 +576,64 @@
     <!--                                SCRIPT                                -->
     <!-- #####################################################################--> 
         <script>
+
+          // globally declare checkRecaptchaResponse 
+          window.checkRecaptchaResponse = checkRecaptchaResponse;
+
+          // activate modal
+          let contactFormModal = new bootstrap.Modal(document.getElementById('contactFormModal'),)
+          window.contactFormModal = contactFormModal
+
           // Add Event Listeners to change arrows when drop-downs are expanded / contracted -->
           addTrainingAccordionDropDownListeners()
+
+          // Activate Carousel
+          const carouselAboutMeElement = document.querySelector('.carousel')
+          const carousel = new bootstrap.Carousel(carouselAboutMeElement, {
+          interval: 6000,
+          keyboard: true,
+          pause:"hover",
+          ride:"carousel",
+          wrap:true
+          })
+
+          // check to see if form is filled out correct and send data
+          let form = document.querySelector("form")
+          let element  = document.getElementById("submit")
+          element.addEventListener("click", function(){
+              response = checkRecaptchaResponse()
+              if (response){
+              console.log("You are human, submiting the form now")
+              event.preventDefault();
+              sendData()
+            }
+            else{
+              console.log("Cannot submit.. Please complte the Recaptcha Quiz")
+            }
+          })
+
+          // sends contact form data
+          function sendData() {
+            const FD = new FormData(form);
+
+            let url = form.dataset.gfUrl;
+            for(let [key, value] of FD) {
+              url = url.replace(key, value);
+            }
+
+            let opts = {
+              method: "POST",
+              mode: "no-cors",
+              redirect: "follow", 
+              referrer: "no-referrer"
+            }
+
+            return fetch(url, opts)
+            .then(alert('“Thank you for your interest in AbelToTrain. I’ll contact you shorty!”'))
+            .then(contactFormModal.hide())
+            .catch((e) => {alert('Error:', e);});
+          }
+
         </script>
 
       <body>
