@@ -600,10 +600,10 @@
 
           // check to see if form is filled out correct and send data
           let form = document.querySelector("form")
-          let element  = document.getElementById("submit")
-          element.addEventListener("click", function(){
-              let human = getRecaptchaResponse()
-              if (human){
+          let submit  = document.getElementById("submit")
+          submit.addEventListener("click", function(){
+              let human = checkRecaptchaResponse()
+              if (true){
               console.log("You are human, submiting the form now")
               event.preventDefault();
               sendData()
