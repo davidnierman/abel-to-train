@@ -133,7 +133,13 @@ h5{
 }
 
 /* #################################################### */
-/*       PARAGRAPHS / TEXTS / QUPTES /CITATIONS         */
+/*                      RECAPTCHA                       */
+/* #################################################### */
+#rc-anchor-container{
+  text-align: center;
+}
+/* #################################################### */
+/*       PARAGRAPHS / TEXTS / QUOTES /CITATIONS         */
 /* #################################################### */
 
 p{
@@ -244,6 +250,16 @@ and (min-width : 1200px) {
     height: 15vh;
   }
 
+  /* #############   Bigger Font ############*/
+  p{
+    font-size: large;
+  }
+
+  /* #############   Bigger Font ############*/
+  .narrow-width{
+    width: 80%;
+  }
+
   /* ###############      Slogan        ############*/
 
   #Slogan{
@@ -271,5 +287,17 @@ and (min-width : 1200px) {
   .row>* {
     padding-right: 0;
     padding-left: 0;
+  }
+  
+}
+
+/* #################################################### */
+/*                POSITIONING FOR MOBILE                */
+/* #################################################### */
+
+@media only screen 
+and (max-width : 500px) {
+  .narrow-width{
+    width: 90%;
   }
 }
