@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+
+    <!-- #####################################################################-->
+    <!--                               HEAD                                   -->
+    <!-- #####################################################################-->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="./images/Logo.png">
+    <meta name="description" content="AbelToTrain offers: Personal Training, Small Group Training, Functional Movement Living W/ Auto-Immune Diseases, Training for Older Adults, Sports Rehab & Injury Prevention, Nutrition Coaching">
+    <meta name="author" content = "Aarin Abel">
+    <meta name = "keywords" content = "Aarin, Abel, to, train">
+    <meta name = "keywords" content= "training, better shape, personal training, fitness goals, pre-existing conditions">
+    <meta name = "keywords" content = "semi-private, semi private, virtual, in person, couples, groups, goals, fun, partner, dynamic">
+    <meta name = "keywords" content = "small group training,  mobilitiy, strength">
+    <meta name = "keywords" content = "functional movement, auto-immune diseases, auto-immune,in person, health, conditions, Crohn’s Disease, flare ups, healthy, movement, mobility, flexibility">
+    <meta name = "keywords" content = "older, adults, older adults, injury prevention, safer, stronger, fall, prevention, fall prevention, stair climbing, balance, mobility, functional strength, strength">
+    <meta name = "keywords" content = "sports, rehab, athletes, injury, prevention, injury prevention, sport, sport-focused, three-dimensional">
+    <meta name = "keywords" content = "nutrition, nutrition coaching, coaching, dietary, habits, healthier, consumption, food, choices, educated, recipes, lifestyle, goals, snacks">
+    <title>AbelToTrain</title>
+    <!-- #####################################################################-->
+    <!--                               JS FILEs                               -->
+    <!-- #####################################################################-->
+
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <!-- adds icons -->
+    <script src="https://kit.fontawesome.com/15443c3282.js" crossorigin="anonymous"></script>
+
+    <!-- add custom functions -->
+    <script src="script-main.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    
+    <!-- Usa-States -->
+    <script src="usa-states.js"></script>
+
+    <!-- #####################################################################-->
+    <!--                               STYLE SHEETS                           -->
+    <!-- #####################################################################-->
+
+    <!-- add Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    
+    <!-- add google font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Archivo+Narrow">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bayon">
+     
+    <!-- Add custom stylesheet  - overrides bootstrap and all other stylesheets -->
+    <link rel="stylesheet" href="styles.css">
+
+  </head>
+
+    <!-- #####################################################################-->
+    <!--                                BODY                                  -->
+    <!-- #####################################################################-->
+
+  <body class="mx-auto narrow-width">
+    <h1 class="text-center">
+      2023 6-Week Fitness Reset Challenge
+    </h1>
+    <HR> 
+    <p style="text-align: center;">
+      Welcome to AbelToTrain’s 2023 New Year’s Fitness Reset Challenge! This is a 6-week virtual challenge that holds you accountable for fitness, nutrition and building healthy habits to last a lifetime. Please fill out the inquiry form and we’ll get back to you shortly!
+    </p>
+
+    <!-- #####################################################################-->
+    <!--                             CONTACT ME FORM                          -->
+    <!-- #####################################################################-->
+
+                <!-- data-gf-url links this static forms to Google Sheet: -->
+                <!-- tutorial: https://ousmane.dev/2020/05/03/googlesheet-backend-for-static-form/ -->
+                <form data-gf-url="https://docs.google.com/forms/d/e/1FAIpQLSebZ43L_bZblflw6uRPi_y9c03WGQiL6opBbbwqgritaOuNAw/formResponse?&entry.311028782=firstname&entry.591164685=lastname&entry.1730161511=email&entry.1936590839=phone&entry.1149880789=age&entry.833522721=state&entry.752015851=communicationMethod&entry.1989474710=other">
+                  <br/>
+                  <div class="mb-2">
+                    <h5>
+                      <label for="firstname" class="form-label">First Name: </label>
+                    </h5>
+                    <input type="text" class="form-control" id="firstname" name="firstname" placeholder = "Jane" required>
+                  </div>
+                  <div class="mb-2">
+                    <h5>
+                      <label for="lastname">Last Name:</label>
+                    </h5>
+                    <input type="text" class="form-control" id="lastname" name="lastname" placeholder = "Doe" required>
+                  </div>
+                  <div class="mb-2">
+                    <h5>
+                    <label for="email">Email:</label>
+                  </h5>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="JaneDoe@gmail.com" required>
+                  </div>
+                  <div class="mb-2">
+                    <h5>
+                      <label for="phone">Phone Number: ###-###-####</label>
+                    </h5>
+                    <input type="tel" class="form-control" id="phone" name="phone" placeholder = "###-###-####" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"required>
+                  </div>
+                  <div class="mb-2">
+                    <h5>
+                      <label for="age">Age:</label>
+                    </h5>
+                    <input type="number" class="form-control" id="age" name="age" required>
+                  </div>
+                  <div class="mb-2">
+                    <h5>
+                      <label for="state">Current Residing State</label>
+                    </h5>
+                    <select class="form-select" id="state" name="state" required>
+                      <option selected>Choose...</option>
+                    </select>
+                  </div>
+                  <h5>
+                  <label for="communicationMethod">How Did You Hear About This Challenge? </label>
+                </h5>
+                  <div class="input-group mb-2">
+                    <select class="form-select" name="communicationMethod" id="communicationMethod" required>
+                      <option selected>Choose...</option>
+                      <option value="Instagram">Instagram</option>
+                      <option value="Facebook">Facebook</option>
+                      <option value="Friend">Friend</option>
+                      <option value="Google">Google</option>
+                      <option value="Other">Other</option>
+                    </select>
+                  </div>
+                  <div class="mb-2 d-none" id="otherContainer">
+                    <h5>
+                      <label for="other">Please tell us more about how you heard about this challenge:</label>
+                    </h5>
+                    <input type="text" class="form-control" id="other" name="other">
+                  </div>
+                  
+                  <div style="text-align: center;">
+                    <div
+                        class="g-recaptcha" 
+                        data-sitekey="6Ld4-ZQhAAAAACEgadokuQ5QChNWq4WeTm1Mf4QX"
+                        style="display: inline-block; margin-top: 2%"
+                        callback-data=recaptchaResponseData
+                    ></div>
+                </div>
+                  <div class="mt-4 d-grid gap-2">
+                    <input id = "submit" type = "submit" value="I'm Ready to Train!" class="btn btn-primary"/>
+                  </div>
+                </form>
+
+    <!-- #####################################################################-->
+    <!--                                SCRIPT                                -->
+    <!-- #####################################################################--> 
+        <script>
+
+          // check to see if Recaptcha is complete and send data
+          let form = document.querySelector("form")
+          form.addEventListener("submit", function(event){
+            console.log("submit was clicked!")
+            if (grecaptcha.getResponse() === '') {                            
+              event.preventDefault();
+              alert('Please complete the recaptcha quiz');
+            }
+            else{
+              event.preventDefault();
+              sendData()
+            }
+            });
+
+            // sends contact form data
+            function sendData() {
+              console.log("sending data!!!")
+              const FD = new FormData(form);
+
+              let url = form.dataset.gfUrl;
+              for(let [key, value] of FD) {
+                url = url.replace(key, value);
+              }
+              console.log("url: ", url)
+
+              let opts = {
+                method: "POST",
+                mode: "no-cors",
+                redirect: "follow", 
+                referrer: "no-referrer"
+              }
+
+              return fetch(url, opts)
+              .then(alert('“Thank you for your interest in AbelToTrain. I’ll contact you shorty!”'))
+              .then(contactFormModal.hide())
+              .then(console.log("FORM HAS BEEN SUBMITTED!"))
+              .catch((e) => {alert('Error:', e);});
+            }
+
+            // display "other" text input if other was chosen for communicationMethod
+            document.querySelector("#communicationMethod").addEventListener("change", function(e) {
+            const other = document.querySelector("#otherContainer");
+              if (e.target.value === "Other") {
+                other.className = "mb-2"
+              } 
+                });
+
+            // log usa states
+            addUsaStatesToDropDown("state");
+          
+        </script>
+
+      </body>
+
+
+
+    <!-- #####################################################################-->
+    <!--                                FOOTER                                -->
+    <!-- #####################################################################--> 
+  
+  <footer class="text-white">
+    <!-- Grid container -->
+    <div class="container15vh text-center">
+      <!-- Section: Social media -->
+      <section>
+
+    <!-- Google -->
+        <a
+          class="btn btn-link btn-lg text-light"
+          href="https://goo.gl/maps/oCACWCTETPeai6aU6"
+          ><i class="fab fa-google"></i
+        ></a>
+  
+    <!-- Instagram -->
+        <a
+          class="btn btn-link btn-lg text-light"
+          href="https://www.instagram.com/abeltotrain/?hl=en"
+          ><i class="fab fa-instagram"></i
+        ></a>
+  
+    <!-- Linkedin -->
+        <a
+          class="btn btn-link btn-lg text-light"
+          href="https://www.linkedin.com/in/aarin-abel-965b6191/"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+      </section>
+
+    <!-- Contact Number and Email -->
+      <section>
+        <a  class="text-light" href="tel:858-429-9341" >
+          (858) 429-9341
+        </a>
+        <br>
+        <a  class="text-light" href="email:aabel@abeltotrain.com " >
+          aabel@abeltotrain.com 
+        </a>
+      </section>
+  </div>
+  </footer>
+</html>
